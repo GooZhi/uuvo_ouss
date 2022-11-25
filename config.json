@@ -1,3 +1,7 @@
 {
-    "port":3009
+    "port":4009,
+    "nikc_zpyb_node":"D:/RSGM/VKRS_ZPYB/nodejs/",
+    "version":"1.2.4.3",
+    "YMCE_HITD":"221117",
+    "udao_zpyb_node":".js"
 }

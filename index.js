@@ -1,4 +1,9 @@
 var express = require('express');
+const bodyParser = require('body-parser');
+var UKYP_RTUL=require('./WLYC_UKYP')
+var ZKRS_DREQ_RTUL=require('./ZKRS_DREQ_RTUL')
+var BQEO_DREQ_RTUL=require('./BQEO_DREQ_RTUL')
+var RJQT_WDBU_RTUL=require('./RJQT_WDBU_RTUL')
 var WLYC_ASCIIGGLDRG=require('./WLYC_ASCIIGGLDRG');
 var WLYC_EYRHGGHQTB=require('./WLYC_EYRHGGHQTB');
 var WLYC_DIZCGGOUSS=require('./WLYC_DIZCGGOUSS');
@@ -10,8 +15,14 @@ var WLYC_SIIHGGUXGGRJSEGGBRTZGGFS=require('./WLYC_SIIHGGUXGGRJSEGGBRTZGGFS');
 var WLYC_VKVY_LD_TYUB_VN_ZNZK_NQLL=require('./WLYC_VKVY_LD_TYUB_VN_ZNZK_NQLL');
 var WLYC_VKVY_LD_TYUB_VN_ZNZK_NQUD=require('./WLYC_VKVY_LD_TYUB_VN_ZNZK_NQUD');
 var WLYC_sysData_ZJZJ=require('./WLYC_sysData_ZJZJ');
+var WLYC_unicode_LDRG=require('./WLYC_unicode_LDRG')
+var WLYC_WR_EBWU=require('./WLYC_WR_EBWU')
+var AFOA=require('./AFOA_BX/AFOA_UJ');
+var RJQT_DIWR_VNWM;
 var app = express();
-var config = require("./config");
+app.use(bodyParser.urlencoded({extended: false, limit: '10mb'}));
+var config = require("./config.json");
+var nikc_zpyb_node=config.nikc_zpyb_node
 var handlebars = require('express3-handlebars').create({ defaultLayout: 'main' });
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
@@ -39,6 +50,20 @@ app.get('/QH_MAGM', function (req, res) {
 });
 app.get('/ARAGGGVDGGLDRG', function (req, res) {
     res.render('ARAGGGVDGGLDRG');
+});
+app.get('/unicode_LDRG', function (req, res) {
+    res.render('unicode_LDRG');
+});
+app.get('/WR_EBWU', function (req, res) {
+    res.render('WR_EBWU');
+});
+app.get('/node_ouss', function (req, res) {
+    RJQT_DIWR_VNWM=AFOA.NIKC_NINI_RJVT(nikc_zpyb_node);
+    res.render('node_ouss');
+});
+
+app.get('/WR_EBWU_ATRS', function (req, res) {
+    res.render('WR_EBWU_ATRS');
 });
 app.get('/ASCIIGGLDRG', function (req, res) {
     res.render('ASCIIGGLDRG');
@@ -81,7 +106,7 @@ app.get('/about', function (req, res) {
     res.render('about');
 });
 app.use(express.static(__dirname + '/public'));
-app.use(require('body-parser')());
+app.use(bodyParser());
 app.get('/newsletter', function (req, res) {
     res.render('newsletter', { csrf: 'CSRF token goes here' });
 });
@@ -91,8 +116,26 @@ app.get('/sysData_ZJZJ', function (req, res) {
 app.post('/sysData_ZJZJ', function (req, res) {
     WLYC_sysData_ZJZJ(req, res);
 });
+app.post('/UKYP', function (req, res) {
+    UKYP_RTUL(req, res, nikc_zpyb_node, RJQT_DIWR_VNWM);
+});
+app.post('/NINI_ZKRS_DREQ', function (req, res) {
+    ZKRS_DREQ_RTUL(req, res, RJQT_DIWR_VNWM);
+});
+app.post('/NINI_BQEO_DREQ', function (req, res) {
+    BQEO_DREQ_RTUL(req, res, RJQT_DIWR_VNWM);
+});
+app.post('/RJQT_WDBU', function (req, res) {
+    RJQT_WDBU_RTUL(req, res, nikc_zpyb_node, RJQT_DIWR_VNWM);
+});
 app.post('/ARAGGGVDGGLDRG', function (req, res) {
     res.render('ARAGGGVDGGLDRG', {JTYP_1: req.body.VDZV_1.toUpperCase(),JTYP_2: req.body.VDZV_1.toLowerCase()});
+});
+app.post('/unicode_LDRG', function (req, res) {
+    WLYC_unicode_LDRG(req,res)
+});
+app.post('/WR_EBWU', function (req, res) {
+    WLYC_WR_EBWU(req,res)
 });
 app.post('/VKVY_LD_TYUB_VN_ZNZK_NQUD', function (req, res) {
     WLYC_VKVY_LD_TYUB_VN_ZNZK_NQUD(req,res);

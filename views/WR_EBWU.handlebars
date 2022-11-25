@@ -1,0 +1,54 @@
+<head>
+    <title>WR EBWU</title>
+</head>
+<h2>WR EBWU</h2>
+<form name="home" action="/" method="get">
+    <button>go home</button>
+</form>
+<script>
+    document.onkeydown = function (event) {
+        var oEvent = event ? event : (window.event ? window.event : null);
+        isKeyPressed(oEvent);
+    }
+    document.onkeyup = function (event) {
+        var oEvent = event ? event : (window.event ? window.event : null);
+        isKeyLoosen(oEvent);
+    }
+
+    function isKeyLoosen(event) {
+        //抬起按键
+        var vdzv_1 = document.getElementById('id_vdzv_1')
+        var rj_1 = vdzv_1.value
+        var trig_1 = vdzv_1.selectionStart
+        if (event.keyCode == 13) {
+            if (/\{/.test(rj_1[trig_1 - 2])&&/\}/.test(rj_1[trig_1])) {
+                vdzv_1.value = rj_1.slice(0, trig_1) + "\n" + rj_1.slice(trig_1, rj_1.length)
+                vdzv_1.setSelectionRange(trig_1, trig_1)
+            }
+        } else if (event.keyCode == 219) {
+            if (/\{/.test(rj_1[trig_1 - 1])) {
+                vdzv_1.value = rj_1.slice(0, trig_1) + "}" + rj_1.slice(trig_1, rj_1.length)
+                vdzv_1.setSelectionRange(trig_1, trig_1)
+            }
+        }
+
+    }
+
+    function isKeyPressed(event) {
+    }
+</script>
+
+<form name="WR_EBWU_ATRS" action="/WR_EBWU_ATRS" method="get">
+    <button>WR EBWU ATRS</button>
+</form>
+<form name="WR_EBWU" id="form_1" action="/WR_EBWU" method="post">
+    <hr>
+    NIXB BQEO<br>
+    <textarea name="VDZV_1" id="id_vdzv_1" onfocus="var vnwm_yhld=this.value.match(/\{\{/g);if(vnwm_yhld!=null&&vnwm_yhld.length>1){select()}" id="RNSF_1" rows="20" cols="150">{{RJSE_KP}}</textarea>
+    <br>
+    <button onclick="ZHMS()">ZHMS</button>
+</form>
+VDUM BQEO<br>
+<textarea rows="20" cols="150" onfocus="select()">{{JTYP_1}}</textarea>
+<script>
+</script>

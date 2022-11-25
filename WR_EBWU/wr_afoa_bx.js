@@ -48,7 +48,7 @@ function wr_afoa_bx() {
     {
         wr_afoa_wu: "HD_LZJK_QH"
         , csrf: `hd lzjk qh tsjq : HD_LZJK ae HD ; ah us mcvn lh lg mr ds, ji rjse uxux dk regex, ah hdpk lg mr ds zvti dk lzjk qh;'md-rjqt=gb2312-md'jukl ja fywy vkvy md-gb2312-md rjvt nixb bqeo tyqh hdpk. `
-        , klch: `        HD_LZJK=LG =lg_xbst,DS=ds_xbst{{
+        , klch: `HD_LZJK=LG =lg_xbst,DS=ds_xbst{{
 lg_xbst 1 2 3 ds_xbst 
 lg_xbst 1 0 3 ds_xbst 
 lg_xbst 1 2 3 ds_xbst 123

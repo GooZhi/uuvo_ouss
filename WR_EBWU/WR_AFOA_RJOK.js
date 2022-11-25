@@ -21,7 +21,11 @@ function WR_AFOA_RJOK(bqeo_kp, rj_nixb) {
                 return rn1.klch
             }).join('\n\n')
         case /^sopc$/i.test(rj_nixb):
-            return JSON.stringify(diwr_vnwm_tsjq)
+            return diwr_vnwm_tsjq.map(rn1=>{
+                return rn1.vnwm_wr_afoa_lzm_wu.map(rn2=>{
+                    return "md-"+rn2+"-md"
+                }).join(' ae ')+":\n"+rn1.csrf+"\nklch:\n"+rn1.klch.replace(/\n[^\n\S]+/g,"\n")
+            }).join("\n\n")
         default:
             throw new Error('acun mcvn', { cause: { nixb: rj_nixb, kp: "" } })
     }

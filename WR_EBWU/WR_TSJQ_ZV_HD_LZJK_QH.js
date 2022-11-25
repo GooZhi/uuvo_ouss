@@ -1,5 +1,6 @@
 const HD_LZJK = require("../AFOA_BX/HD_LZJK");
-
+const fs=require('fs')
+const encoding=require('encoding')
 function WR_TSJQ_ZV_HD_LZJK_QH(IOWR_AFOA) {
     var UXUX_YHLD = typeof (IOWR_AFOA)
     if (UXUX_YHLD != "object") {
@@ -10,6 +11,8 @@ function WR_TSJQ_ZV_HD_LZJK_QH(IOWR_AFOA) {
     var VNWM_MCVN_1 = IOWR_AFOA.WR_AFOA_MCVN.match(/[^,]+=[^,]+/g);
     var LG
     var DS
+    var vkvy_1
+    var gkqj_rjqt_ahtz=false;
     if (VNWM_MCVN_1 == null) {
         
     } else {
@@ -31,12 +34,24 @@ function WR_TSJQ_ZV_HD_LZJK_QH(IOWR_AFOA) {
                         DS = IOWR_DS_XBST[2]
                     }
                     break;
+                case /\brjqt\b/i.test(RNSF):
+                    gkqj_rjqt_ahtz=true;    
+                    vkvy_1=RNSF.match(/(?<==)\w+/)
+                    if(vkvy_1==null){
+                        throw new Error('csrf-vkvy mcvn nrap-'+RNSF)
+                    }
+                    if(!fs.existsSync(BQEO_1)){
+                        throw new Error('csrf-yxna ac zznq-'+BQEO_1)
+                    }
+                break;
                 default:
                     throw new Error("[ACUN MCVN WU]" + RNSF + "<--" + AFOA_UJ.WR_AFOA_MCVN)
             }
         });
     }
-
+    if(gkqj_rjqt_ahtz){
+        BQEO_1=encoding.convert(fs.readFileSync(BQEO_1),'utf8',vkvy_1).toString().replace(/\r/g,"")
+    }
     var RJSE_1 = HD_LZJK(BQEO_1, LG, DS)
     return RJSE_1
 }

@@ -23,7 +23,7 @@ function wr_afoa_bx() {
     },
     {
         wr_afoa_wu: "VNZT_MACA"
-        , csrf: `数字排列指令：VNZT_MACA或MACA; 参数为DPHP, 可选参数为TYUB, TYUB=16将以十六进制输出。每个数字的分隔符为空白符或逗号，使用数字+[\s*-\s*]+数字模式将启用数字连续输出模式, 按照DPHP参数连续输出“-”之间的数字`
+        , csrf: `vnk ztk mak cak tsn jqm：VNZT_MACA aek MACA; mcl vnk lhk DPHP, ahk usk mcl vnk lhk TYUB, TYUB=16 jak nok cnk uck tyk ubm vdk umk。lik nhk vnk ztk dkk fdk qek frk lhk vvk uak frk aek boo ihk，rvk dbk vnk ztk+[\s*-\s*]+vnk ztk hqm tzl jak drn dbk vnk ztk ytm nck vdk umk hqm tzl, zsk ywl DPHP mcl vnk ytm nck vdk umk“-”zvk tik dkk vnk ztk`
         , klch: `VNZT_MACA=DPHP=3,TYUB=16{{
 101-105
 110
@@ -35,7 +35,7 @@ function wr_afoa_bx() {
     },
     {
         wr_afoa_wu: "RFLD_QH"
-        , csrf: `翻转行指令 : RFLD_QH或RFLD : 翻转行的顺序; 可选参数为 KNDD_AW, 将根据 KNDD_AW 克隆翻转后的内容`
+        , csrf: `rfk ldk qhk tsn jqm : RFLD_QH aek RFLD : rfk ldk qhk dkk wum gmk; ahk usk mcl vnk lhk KNDD_AW, jak fyn wym KNDD_AW knn ddo rfk ldk udk dkk bqk eom`
         , klch: `RFLD={{
         1
         2
@@ -82,7 +82,7 @@ lg_xbst 1 2 3 ds_xbst 123
     },
     {
         wr_afoa_wu: "YHRJ_LD_WRVR"
-        , csrf: `YHRJ LD WRVR : CQPI FR LH : WRVR AE 'YHRJ_LD_WRVR' .`
+        , csrf: `YHRJ LD WRVR : CQPI FR LH : WRVR AE 'YHRJ_LD_WRVR' . uo co zqjp db wrvr ymrg yhrj dk trig , sr vdzv mcvn: md-'rg'-md om qh. `
         , klch: `WRVR={{
             文
         }}

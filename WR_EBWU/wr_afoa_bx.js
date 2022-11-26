@@ -9,6 +9,7 @@ var WR_TSJQ_ZV_LD_unicode = require('./WR_TSJQ_ZV_LD_unicode')
 var WR_TSJQ_ZV_CE_EBWU_ZTWM_BQ_ZT_MA_LLLG = require('./WR_TSJQ_ZV_CE_EBWU_ZTWM_BQ_ZT_MA_LLLG')
 var WR_TSJQ_ZV_CE_EBWU_EYSJ_ZJLZ = require('./WR_TSJQ_ZV_CE_EBWU_EYSJ_ZJLZ')
 var WR_TSJQ_ZV_WR_RJOK=require('./WR_TSJQ_ZV_WR_RJOK')
+const WR_TSJQ_ZV_LD_ASCII = require('./WR_TSJQ_ZV_LD_ASCII')
 
 function wr_afoa_bx() {
     this.diwr_vnwm_tsjq = [{
@@ -112,6 +113,19 @@ lg_xbst 1 2 3 ds_xbst 123
     `
         , wr_afoa_rh: WR_TSJQ_ZV_LD_unicode,
         vnwm_wr_afoa_lzm_wu: ["UNICODE"]
+    },
+    {
+        wr_afoa_wu: "LD_ASCII"
+        , csrf: `ld ASCII : cqpi fr : ASCII AE ASC . mcvn wu : MD-RJQT, RJQT=UTF8-MD jukl no vkvy utf8 brtz rjvt tszn dk vnzt rjqt . vdzv bqeo : vnzt, ja fywy vdzv dk vnzt ld lh ASCII. Vnzt zvti db ft rjzt qeuu ay ah. Ou nq rjqt hqtz tt sr fj oan vdzv rjqt yxna.`
+        , klch: `asc={{
+        0x30 0x31 0x33 0x34
+    }}
+    asc=rjqt=utf8{{
+        d:/xyzd/test_221127.java
+    }}
+    `
+        , wr_afoa_rh: WR_TSJQ_ZV_LD_ASCII,
+        vnwm_wr_afoa_lzm_wu: ["ASCII","ASC"]
     },
     {
         wr_afoa_wu: "WR_RJOK"

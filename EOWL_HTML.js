@@ -1,6 +1,9 @@
 var fs1=require('fs')
-function EOWL_HTML(IOWR_VNWM_1, ZKRS_1, BQEO_1){
-    var form_1='<form name="NINI_form" action="/RJQT_WDBU" method="post">';
+function EOWL_HTML(IOWR_VNWM_1, ZKRS_1, BQEO_1, yxna_action){
+    if(yxna_action==null){
+        throw new Error('csrf-mcvn nrap-')
+    }
+    var form_1='<form name="NINI_form" action="'+yxna_action+'" method="post">';
     var RJSE_1 = "";
     for(var EQWY_1=0;EQWY_1<IOWR_VNWM_1.length;EQWY_1++){
         var ZKRS_2 = IOWR_VNWM_1[EQWY_1][ZKRS_1];

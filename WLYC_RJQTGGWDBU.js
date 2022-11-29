@@ -1,7 +1,13 @@
 var AFOA=require('./AFOA_UJ');
 var fs1=require('fs')
 // var RJQT_IOWR_VNWM = AFOA.NIKC_NINI_RJVT(NIKC_1, 'utf8');//获取项目集合的对象.
-function WLYC_RJQTGGWDBU(DIWR_1, response, NIKC_1,RJQT_IOWR_VNWM){
+function WLYC_RJQTGGWDBU(DIWR_1, response, NIKC_1,RJQT_IOWR_VNWM,vkvy){
+    if(vkvy==null){
+        vkvy="utf8"
+    }
+    if(NIKC_1==undefined){
+        throw new Error('csrf-NIKC_1 LH undefined-')
+    }
     if(RJQT_IOWR_VNWM==null){
         console.log("WLYC_RJQTGGWDBU: 缺少参数");
         return;
@@ -28,7 +34,7 @@ function WLYC_RJQTGGWDBU(DIWR_1, response, NIKC_1,RJQT_IOWR_VNWM){
             response.end();          
         break;
         case 'QIGGBQEO':
-            AFOA.VDZV(NIKC_1+DIWR_1.ZKRS_1, DIWR_1.BQEO_0_1);
+            AFOA.VDZV(NIKC_1+DIWR_1.ZKRS_1, DIWR_1.BQEO_0_1, vkvy);
             var IOWR_2 = AFOA.EOWL_IOWR(RJQT_IOWR_VNWM, "WUZT", DIWR_1.ZKRS_1);
             IOWR_2.BQEO=DIWR_1.BQEO_0_1;
         response.write("内容修改完成");

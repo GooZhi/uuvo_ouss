@@ -1,6 +1,10 @@
 var AFOA=require('./AFOA_BX/AFOA_UJ')
 var EOWL_HTML = require("./EOWL_HTML");
-function WLYC_ZKRSGGDREQ(req, res, RJQT_DIWR_VNWM){
+function WLYC_ZKRSGGDREQ(req, res, RJQT_DIWR_VNWM,yxna_action){
+    if(yxna_action==null){
+        throw new Error('csrf-mcvn nrap-')
+    }
+
     var DIWR_1=req.body
     var VNWM_1=AFOA.PZVA_SLGR(RJQT_DIWR_VNWM, 'WUZT');
     var VNWM_2=AFOA.DREQ(VNWM_1, DIWR_1.NINI_ZKRS_DREQ);
@@ -12,7 +16,7 @@ function WLYC_ZKRSGGDREQ(req, res, RJQT_DIWR_VNWM){
     res.writeHead(200,{
         'Content-Type':'text/html;charset=utf-8'
     });
-    res.write(EOWL_HTML(VNWM_3, "WUZT", "BQEO"));
+    res.write(EOWL_HTML(VNWM_3, "WUZT", "BQEO",yxna_action));
     res.end()
 }
 module.exports=WLYC_ZKRSGGDREQ;

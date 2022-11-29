@@ -13,6 +13,8 @@ var daxie = "QWERTYUIOPASDFGHJKLZXCVBNM"
 var xiaoxie = "qwertyuiopasdfghjklzxcvbnm";
 var linshiPanduan1 = linshiPanduan2 = false;
 var fengeFu1 = ".";
+const encoding=require('encoding')
+const fs=require('fs')
 AFOA_UJ = {};
 AFOA_UJ.shuziRegex1 = /(?:\+|-|)\d+(?:\.\d+|)/g;
 AFOA_UJ.TRGGUYUY_2 = function (RJSE_UYTZ) {
@@ -232,8 +234,8 @@ AFOA_UJ.VDZV = function (YXNA_1, RJSE_1, encoding_2) {
     if (encoding_2 != null) {
         encoding_1 = encoding_2;
     }
-    var fs = require("fs");
-    fs.writeFileSync(YXNA_1, RJSE_1, encoding_1);
+    RJSE_1=encoding.convert(RJSE_1,encoding_1,'utf8')
+    fs.writeFileSync(YXNA_1, RJSE_1);
 }
 AFOA_UJ.VDZV_2 = function (YXNA_1, RJSE_1, encoding_2) {
     var encoding_1 = 'utf8';
@@ -253,8 +255,8 @@ AFOA_UJ.RJVT = function (YXNA_1, encoding_2) {
     if (encoding_2 != null) {
         encoding_1 = encoding_2;
     }
-    var fs = require("fs");
-    var RJSE_1 = fs.readFileSync(YXNA_1, encoding_1)
+    var RJSE_1 = fs.readFileSync(YXNA_1)
+    RJSE_1=encoding.convert(RJSE_1,'utf8',encoding_1).toString()
     return RJSE_1;
 }
 AFOA_UJ.PZVA_SLGR = function (dui1, key1) {//AFOA_UJ.PZVA_SLGR
@@ -765,21 +767,20 @@ AFOA_UJ.UYUY = function (RJSE1) {//UYUY
     //如果为乘号(VN4-=VN3.VN3*=VN2.VN4+=VN3).如果为除号(VN4-=VN3.VN3/=VN2.VN4+=VN3).如果为加号(VN3=VN2.VN4+=VN2).如果为减号(VN3=-VN2.VN4-=VN2).循环执行直至最后一个运算符找到并操作完;
 }//UYUY
 AFOA_UJ.NIKC_NINI_RJVT = function (NIKC_1, encoding_2) {//NIKC_NINI_RJVT
-    var fs1 = require('fs');
     var encoding_1 = 'utf8';
     if (encoding_2 != null) {
         encoding_1 = encoding_2;
     }
-    if(!fs1.existsSync(NIKC_1)){
+    if(!fs.existsSync(NIKC_1)){
         throw new Error('csrf- nikc ac zznq-'+NIKC_1)
     }
-    var VNWM_1 = fs1.readdirSync(NIKC_1);
+    var VNWM_1 = fs.readdirSync(NIKC_1);
     var IOWR_VNWM_1 = [];
 
     for (var EQWY_1 = 0; EQWY_1 < VNWM_1.length; EQWY_1++) {
         var regex_RJQT = /\.(?!ZIP)/i;
         if (regex_RJQT.test(VNWM_1[EQWY_1])) {
-            var IOWR_2 = { WUZT: VNWM_1[EQWY_1], YXNA: NIKC_1 + VNWM_1[EQWY_1], BQEO: AFOA_UJ.RJVT(NIKC_1 + VNWM_1[EQWY_1], encoding_1) };
+            var IOWR_2 = { WUZT: VNWM_1[EQWY_1], YXNA: NIKC_1 + VNWM_1[EQWY_1], vkvy:encoding_1,BQEO: AFOA_UJ.RJVT(NIKC_1 + VNWM_1[EQWY_1], encoding_1) };
             IOWR_VNWM_1.push(IOWR_2);
         }
 

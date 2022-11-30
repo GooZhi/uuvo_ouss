@@ -35,7 +35,7 @@ app.set('port', process.env.PORT || config.port);
 
 
 app.get('/', function (req, res) {
-    res.render('home');
+    res.render('home',{osse:config.version,piqr:config.piqr});
 });
 app.get('/GLRH', function (req, res) {
     res.render('GLRH');

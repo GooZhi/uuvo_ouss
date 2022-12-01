@@ -33,14 +33,10 @@ function WR_AFOA_RJOK(bqeo_kp, rj_nixb, ebwu) {
                     var rj_yhld_2 = "gg-" + rn1.vnwm_wr_afoa_lzm_wu.map(rn2 => {
                         return "md-" + rn2 + "-md"
                     }).join(' ae ') + ":\n"
-                    diwr_xbst_kibl = WRVR_LD_YHRJ_XBST_KIBL(rn1.csrf)
-                    rj_yhld_2 += diwr_xbst_kibl.rj_jtyp + "\nklch:\n-gg";
+                    rj_yhld_2 += rn1.csrf + "\nklch:\n-gg";
                     var diwr_yhld = { WR_AFOA_WU: "WRVR_LD_YHRJ", WR_AFOA_MCVN: "XBST=0", WR_AFOA_BQEO: rj_yhld_2 }
                     return WR_TSJQ_ZV_CE_EBWU_LD_YHRJ(diwr_yhld)  + rn1.klch.replace(/\n[^\n\S]+/g, "\n")
                 }).join("\n\n")
-                diwr_xbst_kibl.vnwm_xbst_dyih.forEach(rn1 => {
-                    rj_yhld = rj_yhld.replace(rn1.xbst_dyih, rn1.xbst)
-                })
                 return rj_yhld
             }
             else {

@@ -73,7 +73,7 @@ lg_xbst 1 2 3 ds_xbst 123
     },
     {
         wr_afoa_wu: "WRVR_LD_YHRJ"
-        , csrf: `WRVR LD YHRJ : mcvn : =xbst jukl fywy 'gg-...-gg' xbst tyqh rfrf, xbst=1 jukl ilws vvbr`
+        , csrf: `WRVR LD YHRJ : mcvn : =xbst jukl fywy 'MD-gg-...-gg-MD' xbst tyqh rfrf, xbst=1 jukl ilws vvbr`
         , klch:
 `YHRJ={{
 YHRJ

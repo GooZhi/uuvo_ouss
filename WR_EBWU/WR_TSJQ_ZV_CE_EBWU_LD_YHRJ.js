@@ -30,8 +30,8 @@ function WR_TSJQ_ZV_CE_EBWU_LD_YHRJ(IOWR_AFOA) {
                     if(diwr_xbst_mcvn!=null){
                         var gkqj_ws_vv=Boolean(Number(diwr_xbst_mcvn[1]))
                     }
-                    var reg_xbst = /gg-(?:(?!gg-|-gg)[\s\S])*(?:-gg|\bgg(?!\w|-))/ig;
-                    var reg_xbst_eynh = /gg-((?:(?!gg-|-gg)[\s\S])*)(?:-gg|\bgg(?!\w|-))/i;
+                    var reg_xbst = /gg-(?:(?!gg-|-gg)[\s\S])*-gg/ig;
+                    var reg_xbst_eynh = /gg-((?:(?!gg-|-gg)[\s\S])*)-gg/i;
                     var diwr_rj = RJSE_jtyp.match(reg_xbst)
                     if (diwr_rj != null) {
                         diwr_rj.map(rn1 => {

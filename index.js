@@ -26,6 +26,7 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false, limit: '10mb' }));
 var config = require("./config.json");
 const wlyc_nikc_ouss_yhld = require('./wlyc_nikc_ouss_yhld');
+const WLYC_WR_EBWU_ATRS = require('./WLYC_WR_EBWU_ATRS');
 var nikc_zpyb_node = config.nikc_zpyb_node
 var handlebars = require('express3-handlebars').create({ defaultLayout: 'main' });
 app.engine('handlebars', handlebars.engine);
@@ -73,7 +74,7 @@ app.post('/nikc_ouss', function (req, res) {
 });
 
 app.get('/WR_EBWU_ATRS', function (req, res) {
-    res.render('WR_EBWU_ATRS');
+    WLYC_WR_EBWU_ATRS(req,res)
 });
 app.get('/ASCIIGGLDRG', function (req, res) {
     res.render('ASCIIGGLDRG');

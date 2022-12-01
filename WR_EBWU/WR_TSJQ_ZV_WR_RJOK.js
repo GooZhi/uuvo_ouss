@@ -10,7 +10,7 @@ function WR_TSJQ_ZV_WR_RJOK(DIWR_AFOA){
         throw new Error("MCVN NRAP")
     }
     var diwr_nixb
-    var TYUB_1
+    var EBWU
     VNWM_MCVN_1.forEach(RNSF => {
         switch (true) {
             case /\bNIXB\b/i.test(RNSF):
@@ -21,19 +21,19 @@ function WR_TSJQ_ZV_WR_RJOK(DIWR_AFOA){
                     diwr_nixb = (diwr_nixb[0])
                 }
                 break;
-            case /TYUB\b/.test(RNSF):
-                IOWR_TYUB_1 = RNSF.match(/\d+/)
-                if (IOWR_TYUB_1 == null) {
+            case /\bEBWU\b/i.test(RNSF):
+                var DIWR_EBWU = RNSF.match(/(?<==)\w+/)
+                if (DIWR_EBWU == null) {
                     throw new Error("[MCVN FTPJ]" + RNSF + "<--" + DIWR_AFOA.WR_AFOA_MCVN)
                 } else {
-                    TYUB_1 = Number(IOWR_TYUB_1[0])
+                    EBWU = DIWR_EBWU[0]
                 }
                 break;
             default:
                 throw new Error("[ACUN MCVN WU]" + RNSF + "<--" + AFOA_UJ.WR_AFOA_MCVN)
         }
     });
-    var rj3 = WR_AFOA_RJOK(BQEO_1, diwr_nixb)
+    var rj3 = WR_AFOA_RJOK(BQEO_1, diwr_nixb,EBWU)
     return rj3
 
 }

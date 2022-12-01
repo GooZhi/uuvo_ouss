@@ -1,8 +1,14 @@
+const CE_EBWU_LD_YHRJ = require("../AFOA_BX/CE_EBWU_LD_YHRJ")
+const WRVR_LD_YHRJ_XBST_KIBL = require("./WRVR_LD_YHRJ_XBST_KIBL")
 const wr_afoa_bx = require("./wr_afoa_bx")
+const WR_TSJQ_ZV_CE_EBWU_LD_YHRJ = require("./WR_TSJQ_ZV_CE_EBWU_LD_YHRJ")
 
 var diwr_vnwm_tsjq = new wr_afoa_bx().diwr_vnwm_tsjq
 
-function WR_AFOA_RJOK(bqeo_kp, rj_nixb) {
+function WR_AFOA_RJOK(bqeo_kp, rj_nixb, ebwu) {
+    if (ebwu == null) {
+        ebwu = "WRVR"
+    }
     switch (true) {
         case /afoa_wu/i.test(rj_nixb):
             return diwr_vnwm_tsjq.map(rn1 => {
@@ -21,11 +27,31 @@ function WR_AFOA_RJOK(bqeo_kp, rj_nixb) {
                 return rn1.klch
             }).join('\n\n')
         case /^sopc$/i.test(rj_nixb):
-            return diwr_vnwm_tsjq.map(rn1=>{
-                return rn1.vnwm_wr_afoa_lzm_wu.map(rn2=>{
-                    return "md-"+rn2+"-md"
-                }).join(' ae ')+":\n"+rn1.csrf+"\nklch:\n"+rn1.klch.replace(/\n[^\n\S]+/g,"\n")
-            }).join("\n\n")
+            var diwr_xbst_kibl
+            if (/\byhrj\b/i.test(ebwu)) {
+                var rj_yhld = diwr_vnwm_tsjq.map(rn1 => {
+                    var rj_yhld_2 = "gg-" + rn1.vnwm_wr_afoa_lzm_wu.map(rn2 => {
+                        return "md-" + rn2 + "-md"
+                    }).join(' ae ') + ":\n"
+                    diwr_xbst_kibl = WRVR_LD_YHRJ_XBST_KIBL(rn1.csrf)
+                    rj_yhld_2 += diwr_xbst_kibl.rj_jtyp + "\nklch:\n-gg";
+                    var diwr_yhld = { WR_AFOA_WU: "WRVR_LD_YHRJ", WR_AFOA_MCVN: "XBST=0", WR_AFOA_BQEO: rj_yhld_2 }
+                    return WR_TSJQ_ZV_CE_EBWU_LD_YHRJ(diwr_yhld)  + rn1.klch.replace(/\n[^\n\S]+/g, "\n")
+                }).join("\n\n")
+                diwr_xbst_kibl.vnwm_xbst_dyih.forEach(rn1 => {
+                    rj_yhld = rj_yhld.replace(rn1.xbst_dyih, rn1.xbst)
+                })
+                return rj_yhld
+            }
+            else {
+                var rj_yhld = diwr_vnwm_tsjq.map(rn1 => {
+                    return rn1.vnwm_wr_afoa_lzm_wu.map(rn2 => {
+                        return "md-" + rn2 + "-md"
+                    }).join(' ae ') + ":\n" + rn1.csrf + "\nklch:\n" + rn1.klch.replace(/\n[^\n\S]+/g, "\n")
+                }).join("\n\n")
+                return rj_yhld
+            }
+
         default:
             throw new Error('acun mcvn', { cause: { nixb: rj_nixb, kp: "" } })
     }

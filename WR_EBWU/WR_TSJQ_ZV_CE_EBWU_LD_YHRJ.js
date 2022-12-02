@@ -43,7 +43,7 @@ function WR_TSJQ_ZV_CE_EBWU_LD_YHRJ(IOWR_AFOA) {
                             if(gkqj_ws_vv){
                                 RJSE_jtyp = RJSE_jtyp.replace(rn1,CE_EBWU_LD_YHRJ(rj_rfrf_nixb_bqeo))
                             }else{
-                                RJSE_jtyp = RJSE_jtyp.replace(rn1,CE_EBWU_LD_YHRJ(rj_rfrf_nixb_bqeo).replace(/ gg /ig,"\u917e").replace(/ /g,"").replace(/\u917e/g," "))
+                                RJSE_jtyp = RJSE_jtyp.replace(rn1,CE_EBWU_LD_YHRJ(rj_rfrf_nixb_bqeo).replace(/ gg(?= )/ig,"\u917e").replace(/ /g,"").replace(/\u917e(?: |)/g," "))
                             }
                         })
                     }

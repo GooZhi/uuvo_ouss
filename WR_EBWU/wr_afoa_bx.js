@@ -4,11 +4,12 @@ var WR_TSJQ_ZV_yhrj_ld_wrvr = require('./WR_TSJQ_ZV_yhrj_ld_wrvr')
 var WR_TSJQ_ZV_VNZT_MACA = require('./WR_TSJQ_ZV_VNZT_MACA')
 var WR_TSJQ_ZV_HD_LZJK_QH = require('./WR_TSJQ_ZV_HD_LZJK_QH')
 var WR_TSJQ_ZV_RFLD_QH = require('./WR_TSJQ_ZV_RFLD_QH')
+var WR_TSJQ_ZV_KNDD_RJ = require('./WR_TSJQ_ZV_KNDD_RJ')
 var WR_TSJQ_ZV_RFRF_CE_EBWU = require('./WR_TSJQ_ZV_RFRF_CE_EBWU')
 var WR_TSJQ_ZV_LD_unicode = require('./WR_TSJQ_ZV_LD_unicode')
 var WR_TSJQ_ZV_CE_EBWU_ZTWM_BQ_ZT_MA_LLLG = require('./WR_TSJQ_ZV_CE_EBWU_ZTWM_BQ_ZT_MA_LLLG')
 var WR_TSJQ_ZV_CE_EBWU_EYSJ_ZJLZ = require('./WR_TSJQ_ZV_CE_EBWU_EYSJ_ZJLZ')
-var WR_TSJQ_ZV_WR_RJOK=require('./WR_TSJQ_ZV_WR_RJOK')
+var WR_TSJQ_ZV_WR_RJOK = require('./WR_TSJQ_ZV_WR_RJOK')
 const WR_TSJQ_ZV_LD_ASCII = require('./WR_TSJQ_ZV_LD_ASCII')
 
 function wr_afoa_bx() {
@@ -36,7 +37,7 @@ function wr_afoa_bx() {
     },
     {
         wr_afoa_wu: "RFLD_QH"
-        , csrf: `rfk ldk qhk tsn jqm : rfk ldk qhk dkk wum gmk; ahk usk mcl vnk lhk KNDD_AW, jak fyn wym KNDD_AW knn ddo rfk ldk udk dkk bqk eom`
+        , csrf: `rfk ldk qhk tsn jqm : rfk ldk qhk dkk wum gmk; ahk usk mcl vnk lhk KNDD_AWN, jak fyn wym KNDD_AWN knn ddo rfk ldk udk dkk bqk eom`
         , klch: `RFLD={{
         1
         2
@@ -45,6 +46,18 @@ function wr_afoa_bx() {
     `
         , wr_afoa_rh: WR_TSJQ_ZV_RFLD_QH,
         vnwm_wr_afoa_lzm_wu: ["RFLD"]
+    },
+    {
+        wr_afoa_wu: "KNDD_RJ"
+        , csrf: `kndd vdzv dk bqeo, mcvn md-awn-md=5 jukl kndd 4 ep nixb bqeo , eowl 5 ep bqeo`
+        , klch: `KNDD={{
+        1
+        2
+        3
+    }}
+    `
+        , wr_afoa_rh: WR_TSJQ_ZV_KNDD_RJ,
+        vnwm_wr_afoa_lzm_wu: ["KNDD"]
     },
     {
         wr_afoa_wu: "HD_LZJK_QH"
@@ -59,7 +72,7 @@ lg_xbst 1 2 3 ds_xbst 123
     }}
 `
         , wr_afoa_rh: WR_TSJQ_ZV_HD_LZJK_QH,
-        vnwm_wr_afoa_lzm_wu: ["HD","HD_LZJK"]
+        vnwm_wr_afoa_lzm_wu: ["HD", "HD_LZJK"]
     },
     {
         wr_afoa_wu: "RFRF_WRVR"
@@ -75,7 +88,7 @@ lg_xbst 1 2 3 ds_xbst 123
         wr_afoa_wu: "WRVR_LD_YHRJ"
         , csrf: `WRVR LD YHRJ : mcvn : =xbst jukl fywy 'MD-gg-...-gg-MD' xbst tyqh rfrf, xbst=1 jukl ilws vvbr`
         , klch:
-`YHRJ={{
+            `YHRJ={{
 YHRJ
 }}
 YHRJ=XBST{{
@@ -131,7 +144,7 @@ gg-RFRF RFRF-gg
     }}
     `
         , wr_afoa_rh: WR_TSJQ_ZV_LD_ASCII,
-        vnwm_wr_afoa_lzm_wu: ["ASCII","ASC"]
+        vnwm_wr_afoa_lzm_wu: ["ASCII", "ASC"]
     },
     {
         wr_afoa_wu: "WR_RJOK"
@@ -167,4 +180,4 @@ gg-RFRF RFRF-gg
     }
     this.zjzj_lzjk_wu()
 }
-module.exports=wr_afoa_bx;
+module.exports = wr_afoa_bx;

@@ -1,6 +1,6 @@
-const RFLD_QH = require("../AFOA_BX/RFLD_QH");
+const kndd_rj = require("../AFOA_BX/kndd_rj");
 
-function WR_TSJQ_ZV_RFLD_QH(IOWR_AFOA){
+function WR_TSJQ_ZV_KNDD_RJ(IOWR_AFOA){
     var UXUX_YHLD = typeof (IOWR_AFOA)
     if (UXUX_YHLD != "object") {
         throw new Error("MCVN UXUX MSOX , AOAO JI object:" + UXUX_YHLD)
@@ -14,7 +14,7 @@ function WR_TSJQ_ZV_RFLD_QH(IOWR_AFOA){
     }else{
     VNWM_MCVN_1.forEach(RNSF => {
         switch (true) {
-            case /KNDD_AWN\b/i.test(RNSF):
+            case /\b(KNDD_AWN|awn)\b/i.test(RNSF):
                 IOWR_KNDD_AWN = RNSF.match(/\d+/)
                 if (IOWR_KNDD_AWN == null) {
                     throw new Error("[MCVN FTPJ]" + RNSF + "<--" + IOWR_AFOA.WR_AFOA_MCVN)
@@ -43,7 +43,7 @@ function WR_TSJQ_ZV_RFLD_QH(IOWR_AFOA){
         }
     });
     }
-    var VNWM_1 = RFLD_QH(BQEO_1, KNDD_AWN)
+    var VNWM_1 = kndd_rj(BQEO_1, KNDD_AWN)
     return VNWM_1.join('\n')
 }
-module.exports=WR_TSJQ_ZV_RFLD_QH;
+module.exports=WR_TSJQ_ZV_KNDD_RJ;

@@ -1,4 +1,5 @@
-var fs1=require('fs')
+var fs1=require('fs');
+const html_ld_zk = require('./AFOA_BX/html_ld_zk');
 function EOWL_HTML(IOWR_VNWM_1, ZKRS_1, BQEO_1, yxna_action){
     if(yxna_action==null){
         throw new Error('csrf-mcvn nrap-')
@@ -9,7 +10,7 @@ function EOWL_HTML(IOWR_VNWM_1, ZKRS_1, BQEO_1, yxna_action){
         var ZKRS_2 = IOWR_VNWM_1[EQWY_1][ZKRS_1];
         var BQEO_2 = IOWR_VNWM_1[EQWY_1][BQEO_1];
         var RJQTGGWDBU_UBQT = '<input type="text" name="ZKRS_1" value="'+ZKRS_2+'"><input type="text" name="ZKRS_2"> 指令框:<input onfocus="select()" type="text" name="TSJQ_3"><input type="submit" value="确认">';
-        RJSE_1 += '<div style="background:#fef4d2;">'+form_1+'<h3>'+ZKRS_2+'</h3>'+RJQTGGWDBU_UBQT+'<textarea onfocus="select()" name="BQEO_0_1" rows="'+BQEO_2.split(/\n/).length+'" cols="120">'+BQEO_2+'</textarea>'+'<br></form><hr></div>';
+        RJSE_1 += '<div style="background:#fef4d2;">'+form_1+'<h3>'+ZKRS_2+'</h3>'+RJQTGGWDBU_UBQT+'<textarea onfocus="select()" name="BQEO_0_1" rows="'+BQEO_2.split(/\n/).length+'" cols="120">'+html_ld_zk(BQEO_2)+'</textarea>'+'<br></form><hr></div>';
     }
     return RJSE_1;
 }

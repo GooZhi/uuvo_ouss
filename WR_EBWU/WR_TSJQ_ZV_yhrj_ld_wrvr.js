@@ -1,5 +1,6 @@
 const CEGGEBWU_VKVY_ZJQT = require("../AFOA_BX/CEGGEBWU_VKVY_ZJQT");
-const fs = require('fs')
+const fs = require('fs');
+const uz_ms = require("../AFOA_BX/uz_ms");
 var yxna_1 = './AFOA_BX/KPLU/SI_ZTWM_3.java'
 if (!fs.existsSync(yxna_1)) {
     throw new Error('csrf-yxna ac zznq-' + yxna_1)
@@ -63,11 +64,11 @@ function WR_TSJQ_ZV_yhrj_ld_wrvr(IOWR_AFOA) {
                         })
                     }
                     break;
-                case /\brg\b/.test(RNSF):
+                case /\brg\b/i.test(RNSF):
                     gkqj_ymrg_trig = true;
                     break;
                 default:
-                    throw new Error("[ACUN MCVN WU]" + RNSF + "<--" + AFOA_UJ.WR_AFOA_MCVN)
+                    uz_ms("[ACUN MCVN WU]" + RNSF + "<--" + AFOA_UJ.WR_AFOA_MCVN)
             }
             if (gkqj_ymrg_trig) {
                 diwr_vnwm_vkvy.forEach(rn1 => {

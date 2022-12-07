@@ -1,8 +1,6 @@
 
 var WR_EBWU =require('./WR_EBWU/WR_EBWU');
 var encoding=require('encoding');
-var {exec}=require('child_process');
-const NVMS_EBWU_LD_YHRJ_1 = require('./AFOA_BX/NVMS_EBWU_LD_YHRJ_1');
 function WLYC_WR_EBWU(req,res){
     var RJSE_KP=req.body.VDZV_1
     var JTYP_1

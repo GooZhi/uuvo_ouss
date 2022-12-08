@@ -9,7 +9,9 @@
 // }).join('\n')
 
 // fs.write('./xyzd.java',rj_jtyp_1)
-var AFOA=require('./AFOA_UJ')
-yxna1="./xyzd.java"
-YY=AFOA.RJVT(yxna1,"utf8")
-console.log(YY)
+gg = require('zip')
+var vnwm_1=[]
+for(key in gg){
+    vnwm_1.push(key)
+}
+throw vnwm_1

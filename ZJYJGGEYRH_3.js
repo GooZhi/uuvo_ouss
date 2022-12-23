@@ -1,4 +1,4 @@
-var AFOA = require("./AFOA_UJ.js")
+var AFOA = require("./AFOA_BX/AFOA_UJ.js")
 // var JI_TIQEGGSTIQ = require('./JI_TIQEGGSTIQ')
 function ZJYJGGEYRH(RJSE_ZTHI_VNWM) {
   if (RJSE_ZTHI_VNWM.length < 6) {

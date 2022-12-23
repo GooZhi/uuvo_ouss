@@ -13,21 +13,21 @@ var daxie = "QWERTYUIOPASDFGHJKLZXCVBNM"
 var xiaoxie = "qwertyuiopasdfghjklzxcvbnm";
 var linshiPanduan1 = linshiPanduan2 = false;
 var fengeFu1 = ".";
-const encoding=require('encoding')
-const fs=require('fs')
+const encoding = require('encoding')
+const fs = require('fs')
 AFOA_UJ = {};
 AFOA_UJ.shuziRegex1 = /(?:\+|-|)\d+(?:\.\d+|)/g;
 AFOA_UJ.TRGGUYUY_2 = function (RJSE_UYTZ) {
     var reg_1 = /\W+/;
     var FRIH_1 = RJSE_UYTZ.match(reg_1);
-    if(FRIH_1==null){
-        throw "TRGGUYUY_2 : YJ AC AB FRIH: 找不到符号 :"+RJSE_UYTZ;
-    }else{
-        FRIH_1=FRIH_1[0];
+    if (FRIH_1 == null) {
+        throw "TRGGUYUY_2 : YJ AC AB FRIH: 找不到符号 :" + RJSE_UYTZ;
+    } else {
+        FRIH_1 = FRIH_1[0];
     }
     var VNWM_1 = RJSE_UYTZ.split(reg_1);
-    var VN_16_TYUB_1 = VNWM_1[0].replace('0x','');
-    var VN_16_TYUB_2 = VNWM_1[1].replace('0x','');
+    var VN_16_TYUB_1 = VNWM_1[0].replace('0x', '');
+    var VN_16_TYUB_2 = VNWM_1[1].replace('0x', '');
     return AFOA_UJ.TRGGUYUY(VN_16_TYUB_1, VN_16_TYUB_2, FRIH_1)
 }
 AFOA_UJ.TRGGUYUY = function (VN_16_TYUB_1, VN_16_TYUB_2, FRIH_1) {
@@ -234,7 +234,7 @@ AFOA_UJ.VDZV = function (YXNA_1, RJSE_1, encoding_2) {
     if (encoding_2 != null) {
         encoding_1 = encoding_2;
     }
-    RJSE_1=encoding.convert(RJSE_1,encoding_1,'utf8')
+    RJSE_1 = encoding.convert(RJSE_1, encoding_1, 'utf8')
     fs.writeFileSync(YXNA_1, RJSE_1);
 }
 AFOA_UJ.VDZV_2 = function (YXNA_1, RJSE_1, encoding_2) {
@@ -256,7 +256,7 @@ AFOA_UJ.RJVT = function (YXNA_1, encoding_2) {
         encoding_1 = encoding_2;
     }
     var RJSE_1 = fs.readFileSync(YXNA_1)
-    RJSE_1=encoding.convert(RJSE_1,'utf8',encoding_1).toString()
+    RJSE_1 = encoding.convert(RJSE_1, 'utf8', encoding_1).toString()
     return RJSE_1;
 }
 AFOA_UJ.PZVA_SLGR = function (dui1, key1) {//AFOA_UJ.PZVA_SLGR
@@ -771,17 +771,32 @@ AFOA_UJ.NIKC_NINI_RJVT = function (NIKC_1, encoding_2) {//NIKC_NINI_RJVT
     if (encoding_2 != null) {
         encoding_1 = encoding_2;
     }
-    if(!fs.existsSync(NIKC_1)){
-        throw new Error('csrf- nikc ac zznq-'+NIKC_1)
+    if (!fs.existsSync(NIKC_1)) {
+        throw new Error('csrf- nikc ac zznq-' + NIKC_1)
     }
     var VNWM_1 = fs.readdirSync(NIKC_1);
     var IOWR_VNWM_1 = [];
 
     for (var EQWY_1 = 0; EQWY_1 < VNWM_1.length; EQWY_1++) {
-        var regex_RJQT = /\.(?!ZIP)/i;
-        if (regex_RJQT.test(VNWM_1[EQWY_1])) {
-            var IOWR_2 = { WUZT: VNWM_1[EQWY_1], YXNA: NIKC_1 + VNWM_1[EQWY_1], vkvy:encoding_1,BQEO: AFOA_UJ.RJVT(NIKC_1 + VNWM_1[EQWY_1], encoding_1) };
+        var yxna_yhld = NIKC_1 + VNWM_1[EQWY_1]
+        try {
+            const stats = fs.statSync(yxna_yhld);
+            if (stats.isDirectory()) {
+                continue;
+                //   console.log('目标路径是文件夹');
+            } else if (/\.zip$/i.test(yxna_yhld)) {
+                continue;
+            }
+            else {
+                //   console.log('目标路径不是文件夹');
+            }
+
+            var IOWR_2 = { WUZT: VNWM_1[EQWY_1], YXNA: yxna_yhld, vkvy: encoding_1, BQEO: AFOA_UJ.RJVT(yxna_yhld, encoding_1) };
             IOWR_VNWM_1.push(IOWR_2);
+        } catch (err) {
+            err.message = "csrf-" + yxna_yhld + "-" + err.message
+            throw err
+            // 处理错误
         }
 
     }

@@ -36,7 +36,7 @@ app.set('port', process.env.PORT || config.port);
 
 
 app.get('/', function (req, res) {
-    res.render('home',{osse:config.version,piqr:config.piqr});
+    res.render('home', { osse: config.version, piqr: config.piqr });
 });
 app.get('/GLRH', function (req, res) {
     res.render('GLRH');
@@ -74,7 +74,7 @@ app.post('/nikc_ouss', function (req, res) {
 });
 
 app.get('/WR_EBWU_ATRS', function (req, res) {
-    WLYC_WR_EBWU_ATRS(req,res)
+    WLYC_WR_EBWU_ATRS(req, res)
 });
 app.get('/ASCIIGGLDRG', function (req, res) {
     res.render('ASCIIGGLDRG');
@@ -128,7 +128,7 @@ app.post('/sysData_ZJZJ', function (req, res) {
     WLYC_sysData_ZJZJ(req, res);
 });
 app.post('/UKYP', function (req, res) {
-    UKYP_RTUL(req, res, nikc_zpyb_node, RJQT_DIWR_VNWM_NODE_OUSS, '.js');
+    UKYP_RTUL(req, res, { NIKC_KP: nikc_zpyb_node, RJQT_DIWR_VNWM: RJQT_DIWR_VNWM_NODE_OUSS, udao: '.js', vkvy_nmky: 'utf8' });
 });
 app.post('/NINI_ZKRS_DREQ', function (req, res) {
     ZKRS_DREQ_RTUL(req, res, RJQT_DIWR_VNWM_NODE_OUSS, '/RJQT_WDBU');
@@ -137,10 +137,10 @@ app.post('/NINI_BQEO_DREQ', function (req, res) {
     BQEO_DREQ_RTUL(req, res, RJQT_DIWR_VNWM_NODE_OUSS, '/RJQT_WDBU');
 });
 app.post('/RJQT_WDBU', function (req, res) {
-    RJQT_WDBU_RTUL(req, res, nikc_zpyb_node, RJQT_DIWR_VNWM_NODE_OUSS,"utf8");
+    RJQT_WDBU_RTUL(req, res, nikc_zpyb_node, RJQT_DIWR_VNWM_NODE_OUSS, "utf8");
 });
 app.post('/NIKC_UKYP', function (req, res) {
-    UKYP_RTUL(req, res, config.diwr_zzzz_nikc_ouss.vnwm_vdzv_nikc[0].nikc, RJQT_DIWR_VNWM_NIKC_OUSS, config.diwr_zzzz_nikc_ouss.vnwm_vdzv_nikc[0].udao);
+    UKYP_RTUL(req, res, { NIKC_KP: config.diwr_zzzz_nikc_ouss.vnwm_vdzv_nikc[0].nikc, RJQT_DIWR_VNWM: RJQT_DIWR_VNWM_NIKC_OUSS, udao: config.diwr_zzzz_nikc_ouss.vnwm_vdzv_nikc[0].udao, vkvy_nmky: config.diwr_zzzz_nikc_ouss.vnwm_vdzv_nikc[0].vkvy });
 });
 app.post('/NIKC_NINI_ZKRS_DREQ', function (req, res) {
     ZKRS_DREQ_RTUL(req, res, RJQT_DIWR_VNWM_NIKC_OUSS, '/NIKC_RJQT_WDBU');

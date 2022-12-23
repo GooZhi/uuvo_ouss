@@ -1,22 +1,26 @@
-var AFOA = require('./AFOA_UJ');
+var AFOA = require('./AFOA_BX/AFOA_UJ');
 var fs1 = require('fs');
-function UKYP(ZKRS_1, BQEO_1, NIKC_1, RJQT_IOWR_VNWM, udao) {
+function UKYP(diwr_mcvn) {
+    var ZKRS_KP=diwr_mcvn.ZKRS_KP
+    var BQEO_KP=diwr_mcvn.BQEO_KP
+    var NIKC_KP=diwr_mcvn.NIKC_KP
+    var RJQT_DIWR_VNWM=diwr_mcvn.RJQT_DIWR_VNWM
+    var udao=diwr_mcvn.udao
+    var vkvy_nmky=diwr_mcvn.vkvy_nmky
     if (udao == null) {
         udao = ".txt"
     }
+    if(vkvy_nmky==null){
+        vkvy_nmky='utf8'
+    }
     udao = udao.replace(/^([^\.])/, ".$1")
-    if (fs1.existsSync(NIKC_1 + ZKRS_1 + udao)) {
-        return ZKRS_1 + "文件已经存在,无法添加"
+    if (fs1.existsSync(NIKC_KP + ZKRS_KP + udao)) {
+        return ZKRS_KP + "文件已经存在,无法添加"
     } else {
-        AFOA.VDZV(NIKC_1 + ZKRS_1 + udao, BQEO_1);
-        var IOWR_1 = { WUZT: ZKRS_1 + udao, YXAN: NIKC_1 + ZKRS_1, BQEO: BQEO_1 };
-        RJQT_IOWR_VNWM.push(IOWR_1);
-        return ZKRS_1 + "已经成功添加";
+        AFOA.VDZV(NIKC_KP + ZKRS_KP + udao, BQEO_KP, vkvy_nmky);
+        var DIWR_1 = { WUZT: ZKRS_KP + udao, YXAN: NIKC_KP + ZKRS_KP, BQEO: BQEO_KP };
+        RJQT_DIWR_VNWM.push(DIWR_1);
+        return ZKRS_KP + "已经成功添加";
     }
 }
-function UKYP_2(obj, NIKC_1, RJQT_IOWR_VNWM, udao) {
-    var ZKRS_0_1 = obj.ZKRS_1;
-    var BQEO_0_1 = obj.BQEO_0_1;
-    return UKYP(ZKRS_0_1, BQEO_0_1, NIKC_1, RJQT_IOWR_VNWM, udao)
-}
-module.exports = UKYP_2;
+module.exports = UKYP;

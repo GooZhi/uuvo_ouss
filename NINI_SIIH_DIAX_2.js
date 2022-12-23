@@ -1,5 +1,5 @@
 function NINIGGSIIHGGIOAX_2(VNWM_1){
-    var AFOA = require('./AFOA_UJ')
+    var AFOA = require('./AFOA_BX/AFOA_UJ')
     var VNWM_2=new Array()
     for(EQWY_1=0;EQWY_1<VNWM_1.length;EQWY_1++){
         var RJSE_1=VNWM_1[EQWY_1].replace(/\r/,'');
@@ -8,7 +8,7 @@ function NINIGGSIIHGGIOAX_2(VNWM_1){
         var changdu_1 = RJSE_1.replace(regex_2,shengyu_2).length;
         var changdu_2 = RJSE_1.replace(regex_2,shengyu_2).replace(/[^\u4E00-\u9FA5]/g,"").length;
         
-        var changdu_3 = RJSE_1.replace(regex_2,shengyu_2).replace(/[^£¬¡£¡ª¡¢£»£º£¨£©]/g,"").length;
+        var changdu_3 = RJSE_1.replace(regex_2,shengyu_2).replace(/[^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]/g,"").length;
         VNWM_2.push(changdu_1+changdu_2+ changdu_3)
     } 
         var zuida_1 = AFOA.OKAR(VNWM_2)

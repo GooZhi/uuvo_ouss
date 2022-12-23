@@ -1,32 +1,86 @@
-function HD_LZJK(RJSE1, LDGGXBST, DSGGXBST) {//this.quChongfuHang
-    if (RJSE1 == null) {
-        throw new Error("MCVN NRAP")        
+const uz_ms = require("./uz_ms")
+
+function HD_LZJK(diwr_mcvn) {//this.quChongfuHang
+    var RJSE_1 = diwr_mcvn.RJSE_KP
+    var LG_XBST = diwr_mcvn.LG_XBST
+    var DS_XBST = diwr_mcvn.DS_XBST
+    var gkqj_ytnc_cl_hd = diwr_mcvn.gkqj_ytnc_cl_hd
+    if (typeof (gkqj_ytnc_cl_hd) != "boolean") {
+        uz_ms("csrf-gkqj_ytnc_cl_hd aoao ji boolean-" + JSON.stringify(diwr_mcvn))
     }
-    var VNWM_2 = RJSE1.split("\n");
-    var VNWM_3 = [];
-    if (LDGGXBST == null) {
-        for (suoyin1 in VNWM_2) {
-            if (VNWM_3.indexOf(VNWM_2[suoyin1]) == -1) {
-                VNWM_3.push(VNWM_2[suoyin1]);
-            }
+    var gkqj_zznq_ytnc = false
+    var gkqj_pc_lG_xbst = false;
+    var gkqj_pc_ds_xbst = false;
+    if (RJSE_1 == null) {
+        uz_ms("csrf-MCVN NRAP-")
+    }
+    var VNWM_RJSE_1 = RJSE_1.split("\n");
+    var VNWM_JTYJ = [];
+    gkqj_pc_lG_xbst = Boolean(LG_XBST);
+    gkqj_pc_ds_xbst = Boolean(DS_XBST);
+    var VNWM_YBKC = [];
+    if (gkqj_pc_ds_xbst && gkqj_pc_ds_xbst && gkqj_ytnc_cl_hd) {
+        if (typeof (LG_XBST) != "string") {
+            uz_ms("[MCVN UXUX MSOX , AOAO JI string]" + typeof (LG_XBST) + "<--")
         }
-    } else if (typeof (LDGGXBST) == "string") {
-        var regex_1 = new RegExp("(.*?)(" + LDGGXBST + ".*?" + DSGGXBST + ")(.*)");
+        var regex_1 = new RegExp("(.*?)(" + LG_XBST + ".*?" + DS_XBST + ")(.*)");
         var shengyu_1 = "$2";
-        var VNWM_4 = [];
-
-        for (suoyin1 in VNWM_2) {
-            var RJSE_4 = VNWM_2[suoyin1].replace(regex_1, shengyu_1);
-            if (VNWM_4.indexOf(RJSE_4) == -1) {
-                VNWM_4.push(RJSE_4);
-                VNWM_3.push(VNWM_2[suoyin1]);
+        var VNWM_YHLD = [];
+        for (suoyin1 in VNWM_RJSE_1) {
+            var RJSE_YHLD = VNWM_RJSE_1[suoyin1].replace(regex_1, shengyu_1);
+            if (VNWM_YBKC[VNWM_YBKC.length - 1] == RJSE_YHLD) {
+                gkqj_zznq_ytnc = true;
+            } else {
+                gkqj_zznq_ytnc = false
+            }
+            VNWM_YBKC.push(RJSE_YHLD)
+            if (VNWM_YHLD.indexOf(RJSE_YHLD) == -1) {
+                VNWM_YHLD.push(RJSE_YHLD);
+                VNWM_JTYJ.push(VNWM_RJSE_1[suoyin1]);
+            } else if (!gkqj_zznq_ytnc) {
+                VNWM_YHLD.push(RJSE_YHLD);
+                VNWM_JTYJ.push(VNWM_RJSE_1[suoyin1]);
             }
         }
+    } else if (gkqj_pc_ds_xbst && gkqj_pc_ds_xbst && !gkqj_ytnc_cl_hd) {
 
+        if (typeof (LG_XBST) != "string") {
+            uz_ms("[MCVN UXUX MSOX , AOAO JI string]" + typeof (LG_XBST) + "<--")
+        }
+        var regex_1 = new RegExp("(.*?)(" + LG_XBST + ".*?" + DS_XBST + ")(.*)");
+        var shengyu_1 = "$2";
+        var VNWM_YHLD = [];
+        for (suoyin1 in VNWM_RJSE_1) {
+            var RJSE_YHLD = VNWM_RJSE_1[suoyin1].replace(regex_1, shengyu_1);
+            if (VNWM_YHLD.indexOf(RJSE_YHLD) == -1) {
+                VNWM_YHLD.push(RJSE_YHLD);
+                VNWM_JTYJ.push(VNWM_RJSE_1[suoyin1]);
+            }
+        }
+    } else if (!gkqj_pc_ds_xbst && !gkqj_pc_ds_xbst && gkqj_ytnc_cl_hd) {
+        for (suoyin1 in VNWM_RJSE_1) {
+            if (VNWM_YBKC[VNWM_YBKC.length - 1] == VNWM_RJSE_1[suoyin1]) {
+                gkqj_zznq_ytnc = true;
+            } else {
+                gkqj_zznq_ytnc = false
+            }
+            VNWM_YBKC.push(VNWM_RJSE_1[suoyin1])
+            if (VNWM_JTYJ.indexOf(VNWM_RJSE_1[suoyin1]) == -1) {
+                VNWM_JTYJ.push(VNWM_RJSE_1[suoyin1]);
+            } else if (!gkqj_zznq_ytnc) {
+                VNWM_JTYJ.push(VNWM_RJSE_1[suoyin1]);
+            }
+        }
+    } else if (!gkqj_pc_ds_xbst && !gkqj_pc_ds_xbst && !gkqj_ytnc_cl_hd) {
+        for (suoyin1 in VNWM_RJSE_1) {
+            if (VNWM_JTYJ.indexOf(VNWM_RJSE_1[suoyin1]) == -1) {
+                VNWM_JTYJ.push(VNWM_RJSE_1[suoyin1]);
+            }
+        }
     } else {
-        throw new Error("[MCVN UXUX MSOX , AOAO JI string]"+typeof (LDGGXBST)+"<--")
+        uz_ms("csrf-ravc dk epqt vbyt-kp-" + JSON.stringify(diwr_mcvn))
     }
-    RJSE1 = VNWM_3.join("\n");
-    return RJSE1;
+    var RJSE_JTYJ = VNWM_JTYJ.join("\n");
+    return RJSE_JTYJ;
 }//this.quChongfuHang
-module.exports=HD_LZJK;
+module.exports = HD_LZJK;

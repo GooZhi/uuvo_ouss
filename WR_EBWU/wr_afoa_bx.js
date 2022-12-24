@@ -11,6 +11,7 @@ var WR_TSJQ_ZV_CE_EBWU_ZTWM_BQ_ZT_MA_LLLG = require('./WR_TSJQ_ZV_CE_EBWU_ZTWM_B
 var WR_TSJQ_ZV_CE_EBWU_EYSJ_ZJLZ = require('./WR_TSJQ_ZV_CE_EBWU_EYSJ_ZJLZ')
 var WR_TSJQ_ZV_WR_RJOK = require('./WR_TSJQ_ZV_WR_RJOK')
 const WR_TSJQ_ZV_LD_ASCII = require('./WR_TSJQ_ZV_LD_ASCII')
+const WR_TSJQ_ZV_WRVR_FKKC_EY_ZT = require('./WR_TSJQ_ZV_WRVR_FKKC_EY_ZT')
 
 function wr_afoa_bx() {
     this.diwr_vnwm_tsjq = [{
@@ -154,6 +155,15 @@ gg-RFRF RFRF-gg
     `
         , wr_afoa_rh: WR_TSJQ_ZV_WR_RJOK,
         vnwm_wr_afoa_lzm_wu: ["RJOK"]
+    },
+    {
+        wr_afoa_wu: "WRVR_FKKC"
+        , csrf: `WRVR_FKKC : WRVR ey zt fkkc. Aqfc vdzv ef pc WRVR dk rj bx yxna. Rj bx brtz lh : Fj fc li qh ef pc wrvr om qh.`
+        , klch: `FKKC={{
+    }}
+    `
+        , wr_afoa_rh: WR_TSJQ_ZV_WRVR_FKKC_EY_ZT,
+        vnwm_wr_afoa_lzm_wu: ["FKKC","FKKC_EY_ZT"]
     },
     {
         wr_afoa_wu: "CE_EBWU_EYSJ_ZJLZ"

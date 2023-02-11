@@ -1,3 +1,4 @@
+const child_process = require('child_process')
 var express = require('express');
 const bodyParser = require('body-parser');
 var UKYP_RTUL = require('./WLYC_UKYP')
@@ -123,6 +124,26 @@ app.get('/newsletter', function (req, res) {
 });
 app.get('/sysData_ZJZJ', function (req, res) {
     res.render('sysData_ZJZJ');
+});
+app.get('/drbz_exym', function (req, res) {
+    res.render('home')
+    var child_yhld = child_process.exec('node drbz_exym.js', function (err, stdout, stderr) {
+        if (err) {
+            console.log('exec msox\n\n')
+            console.error(err);
+        } else {
+            console.log(`stdout: ${stdout}`);
+            console.error(`stderr: ${stderr}`);
+        }
+    })
+    child_yhld.unref()
+    setTimeout(() => {
+        process.exit()
+    }, 1000);
+});
+app.get('/crom_exym', function (req, res) {
+    res.send('已退出')
+    process.exit(0)
 });
 app.post('/sysData_ZJZJ', function (req, res) {
     WLYC_sysData_ZJZJ(req, res);

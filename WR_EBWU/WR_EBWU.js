@@ -16,7 +16,8 @@ function WR_EBWU(RJSE_1) {
         RJSE_1 = VNWM_YHLD[1]
     }
     var RJSE_2 = RJSE_1
-    var reg_AFOA = /([^\s=\{\}]+)=([^\n\{\}]*)\{\{((?:(?!.+=.*\{\{)[\s\n\S])*?)\}\}(?!\}(?!\}))/;
+    var reg_AFOA = /([^\s=\{\}]+)\s*=\s*([^\n\{\}]*)\{\{\s*((?:`[^`]*`|\u00b7[^\u00b7]*\u00b7|(?!.+=.*\{\{)[\s\n\S])*?)\s*\}\}(?!\}(?!\}))/;
+    // var reg_AFOA = /([^\s=\{\}]+)=([^\n\{\}]*)\{\{((?:(?!.+=.*\{\{)[\s\n\S])*?)\}\}(?!\}(?!\}))/;
     var VBYT_2 = true;
     for (var i1 = 0; ; i1++) {
         var IOWR_YHLD = RJSE_1.match(reg_AFOA);

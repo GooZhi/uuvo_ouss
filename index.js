@@ -28,6 +28,7 @@ app.use(bodyParser.urlencoded({ extended: false, limit: '10mb' }));
 var config = require("./config.json");
 const wlyc_nikc_ouss_yhld = require('./wlyc_nikc_ouss_yhld');
 const WLYC_WR_EBWU_ATRS = require('./WLYC_WR_EBWU_ATRS');
+const WLYC_SLRH_JYUY = require('./WLYC_SLRH_JYUY');
 var nikc_zpyb_node = config.nikc_zpyb_node
 var handlebars = require('express3-handlebars').create({ defaultLayout: 'main' });
 app.engine('handlebars', handlebars.engine);
@@ -73,6 +74,13 @@ app.get('/nikc_ouss_yhld', function (req, res) {
 app.post('/nikc_ouss', function (req, res) {
     WLYC_nikc_ouss(req, res, config, RJQT_DIWR_VNWM_NIKC_OUSS)
 });
+app.get('/SLRH_JYUY', function (req, res) {
+    res.render('SLRH_JYUY')
+});
+
+app.post('/SLRH_JYUY', function (req, res) {
+    WLYC_SLRH_JYUY(req, res)
+});
 
 app.get('/WR_EBWU_ATRS', function (req, res) {
     WLYC_WR_EBWU_ATRS(req, res)
@@ -117,6 +125,7 @@ app.get('/about', function (req, res) {
     //var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
     res.render('about');
 });
+app.use(express.static(__dirname + '/afoa_bx'));
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser());
 app.get('/newsletter', function (req, res) {

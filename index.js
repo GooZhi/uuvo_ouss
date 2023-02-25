@@ -103,6 +103,9 @@ app.get('/EYRH_NINI_HQMV_YENH_YYHA', function (req, res) {
 app.get('/EYRH_NINI_HQMV', function (req, res) {
     res.render('EYRH_NINI_HQMV');
 });
+app.get('/yfxb_fkkc', function (req, res) {
+    res.render('yfxb_fkkc');
+});
 app.get('/EYRHGGHQTB', function (req, res) {
     res.render('EYRHGGHQTB');
 });

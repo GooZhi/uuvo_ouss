@@ -191,7 +191,7 @@ app.post('/unicode_LDRG', function (req, res) {
     WLYC_unicode_LDRG(req, res)
 });
 app.post('/WR_EBWU', function (req, res) {
-    WLYC_WR_EBWU(req, res)
+    WLYC_WR_EBWU(req, res, config)
 });
 app.post('/VKVY_LD_TYUB_VN_ZNZK_NQUD', function (req, res) {
     WLYC_VKVY_LD_TYUB_VN_ZNZK_NQUD(req, res);
@@ -236,7 +236,7 @@ app.use(function (err, req, res, next) {
     console.error(err);
     console.error(err.stack);
     res.status(500);
-    res.render('500', { err: err, LCLC_CSRF: err.stack });
+    res.render('500', { err: err, err_stack: err.stack });
 });
 
 app.listen(app.get('port'), function () {

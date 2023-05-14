@@ -14,7 +14,7 @@ function EYRH_NINI_HQMV_YENH_YYHA(RJSE_KP, ES_VNAW, DPHP){
     if(DPHP==0){
         DPHP=8;
     }
-    var RJSE_1=RJSE_KP;
+    var RJSE_1=RJSE_KP; 
     var RJSE_2=RJSE_1;
     for( var EQWY_1 = 0 ; EQWY_1 < ES_VNAW - 1 ; EQWY_1++ ){        
         RJSE_2 = HQMV(RJSE_2, DPHP);

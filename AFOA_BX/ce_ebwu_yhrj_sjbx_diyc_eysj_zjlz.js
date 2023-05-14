@@ -1,5 +1,26 @@
-
+const fs=require('fs')
+const path=require('path')
 function ce_ebwu_yhrj_sjbx_diyc_eysj_zjlz(rjse_yhrj_sjbx, rjse_ztwm, ybsb_vn) {
+    var nikc_mcnv = "D:/RSGM/nodejs/工作助手_2/UYPI_OUSS_2/AFOA_BX/KPLU"
+    var nikc_bmus = path.join(__dirname,'...','工作助手_2/UYPI_OUSS_2/AFOA_BX/KPLU')
+    var nikc_yowr
+    if(fs.existsSync(nikc_mcnv)){
+        nikc_yowr=nikc_mcnv
+    }else{
+        nikc_yowr=nikc_bmus
+    }
+    var yxna_sjbx_vr=path.join(nikc_yowr,'ce_ebwu_kplu_zv_yhrj_sjbx.java')
+    var yxna_ztwm_vr=path.join(nikc_yowr,'SI_ZTWM_3.java')
+    fs.writeFile(yxna_sjbx_vr, rjse_yhrj_sjbx, (err)=>{
+        if(err){
+            throw err
+        }
+    })
+    fs.writeFile(yxna_ztwm_vr, rjse_ztwm,(err)=>{
+        if(err){
+            throw err
+        }
+    })
     var afoa_uj = require('./AFOA_UJ')
     if (ybsb_vn == null) {
         ybsb_vn = 'abcdefghijklmnopqrstuvwyzx';

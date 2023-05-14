@@ -13,6 +13,7 @@ var WR_TSJQ_ZV_WR_RJOK = require('./WR_TSJQ_ZV_WR_RJOK')
 var WR_TSJQ_ZV_md_ld_html = require('./WR_TSJQ_ZV_md_ld_html')
 const WR_TSJQ_ZV_LD_ASCII = require('./WR_TSJQ_ZV_LD_ASCII')
 const WR_TSJQ_ZV_WRVR_FKKC_EY_ZT = require('./WR_TSJQ_ZV_WRVR_FKKC_EY_ZT')
+const WR_TSJQ_ZV_UWUU_OUSS_NIKC = require('./WR_TSJQ_ZV_UWUU_OUSS_NIKC')
 
 function wr_afoa_bx() {
     this.diwr_vnwm_tsjq = [{
@@ -99,6 +100,17 @@ lg_xbst 1 2 3 ds_xbst 123
         vnwm_wr_afoa_lzm_wu: ["RFRF"]
     },
     {
+        wr_afoa_wu: "UWUU_OUSS_NIKC"
+        , eowl_uxux: "string"
+        , zkrs: "UWUU OUSS RJQT TUM"
+        , csrf: `WRVR RFRF : RFRF YHRJ MR WRVR BC WRVR AE YHRJ. MCVN WU LH "YHRJ" AE "WRVR" JA VDUM DIYC DK WRVR AE YHRJ. `
+        , klch: `uwuu={{
+    }}
+    `
+        , wr_afoa_rh: WR_TSJQ_ZV_UWUU_OUSS_NIKC,
+        vnwm_wr_afoa_lzm_wu: ["UWUU", "OPEN"]
+    },
+    {
         wr_afoa_wu: "md_ld_html"
         , eowl_uxux: "string"
         , zkrs: "markdown ld html"
@@ -110,8 +122,8 @@ lg_xbst 1 2 3 ds_xbst 123
     }}
     `
         , wr_afoa_rh: WR_TSJQ_ZV_md_ld_html,
-        vnwm_wr_afoa_lzm_wu: ["MD_LD_HTML","TZFS"]
-    },    
+        vnwm_wr_afoa_lzm_wu: ["MD_LD_HTML", "TZFS"]
+    },
     {
         wr_afoa_wu: "WRVR_LD_YHRJ"
         , eowl_uxux: "string"
@@ -204,7 +216,7 @@ gg-RFRF RFRF-gg
     }}
     `
         , wr_afoa_rh: WR_TSJQ_ZV_WRVR_FKKC_EY_ZT,
-        vnwm_wr_afoa_lzm_wu: ["FKKC","FKKC_EY_ZT"]
+        vnwm_wr_afoa_lzm_wu: ["FKKC", "FKKC_EY_ZT"]
     },
     {
         wr_afoa_wu: "CE_EBWU_EYSJ_ZJLZ"

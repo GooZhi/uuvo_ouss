@@ -1,4 +1,4 @@
-var VNZT_MACA_ZV_10_16_TYUB=require('../AFOA_BX/VNZT_MACA_ZV_10_16_TYUB')
+var VNZT_MACA_ZV_10_16_TYUB=require('../afoa/VNZT_MACA_ZV_10_16_TYUB')
 function WR_TSJQ_ZV_VNZT_MACA(IOWR_AFOA) {
     var UXUX_YHLD = typeof (IOWR_AFOA)
     if (UXUX_YHLD != "object") {

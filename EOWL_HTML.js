@@ -1,5 +1,5 @@
 var fs1=require('fs');
-const html_ld_zk = require('./AFOA_BX/html_ld_zk');
+const html_ld_zk = require('./afoa/html_ld_zk');
 function EOWL_HTML(IOWR_VNWM_1, ZKRS_1, BQEO_1, yxna_action){
     if(yxna_action==null){
         throw new Error('csrf-mcvn nrap-')

@@ -1,6 +1,6 @@
 
 
-var AFOA = require('./AFOA_BX/AFOA_UJ')
+var AFOA = require('./afoa/AFOA_UJ')
 const fs = require('fs')
 function WLYC_nikc_ouss(req, res, config, RJQT_DIWR_VNWM_NIKC_OUSS) {
     var nikc_bnll

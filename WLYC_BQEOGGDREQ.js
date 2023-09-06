@@ -1,4 +1,4 @@
-var AFOA=require('./AFOA_BX/AFOA_UJ')
+var AFOA=require('./afoa/AFOA_UJ')
 var EOWL_HTML = require("./EOWL_HTML");
 function WLYC_ZKRSGGDREQ(DIWR_1, response, RJQT_IOWR_VNWM, yxna_action){
     if(yxna_action==null){

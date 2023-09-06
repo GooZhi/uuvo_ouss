@@ -19,7 +19,7 @@ var WLYC_VKVY_LD_TYUB_VN_ZNZK_NQUD = require('./WLYC_VKVY_LD_TYUB_VN_ZNZK_NQUD')
 var WLYC_sysData_ZJZJ = require('./WLYC_sysData_ZJZJ');
 var WLYC_unicode_LDRG = require('./WLYC_unicode_LDRG')
 var WLYC_WR_EBWU = require('./WLYC_WR_EBWU')
-var AFOA = require('./AFOA_BX/AFOA_UJ');
+var AFOA = require('./afoa/AFOA_UJ');
 var RJQT_DIWR_VNWM_NODE_OUSS;
 var RJQT_DIWR_VNWM_NIKC_OUSS = [];
 var vnwm_NIKC_OUSS_DK_NIKC = [];

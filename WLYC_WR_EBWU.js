@@ -2,10 +2,10 @@
 var WR_EBWU = require('./WR_EBWU/WR_EBWU');
 var encoding = require('encoding');
 var { exec } = require('child_process');
-const NVMS_EBWU_LD_YHRJ_2 = require('./AFOA_BX/NVMS_EBWU_LD_YHRJ_2');
-const NVMS_EBWU_LD_YHRJ_3 = require('./AFOA_BX/NVMS_EBWU_LD_YHRJ_3');
-const NVMS_EBWU_LD_YHRJ_1 = require('./AFOA_BX/NVMS_EBWU_LD_YHRJ_1');
-const uz_ms = require('./AFOA_BX/uz_ms');
+const NVMS_EBWU_LD_YHRJ_2 = require('./afoa/NVMS_EBWU_LD_YHRJ_2');
+const NVMS_EBWU_LD_YHRJ_3 = require('./afoa/NVMS_EBWU_LD_YHRJ_3');
+const NVMS_EBWU_LD_YHRJ_1 = require('./afoa/NVMS_EBWU_LD_YHRJ_1');
+const uz_ms = require('./afoa/uz_ms');
 async function WLYC_WR_EBWU(req, res, diwr_neig) {
     if (!diwr_neig) {
         uz_ms('csrf-mcvn nrap-')

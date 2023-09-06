@@ -1,4 +1,4 @@
-var AFOA=require('./AFOA_BX/AFOA_UJ');
+var AFOA=require('./afoa/AFOA_UJ');
 var fs1=require('fs')
 // var RJQT_IOWR_VNWM = AFOA.NIKC_NINI_RJVT(NIKC_1, 'utf8');//获取项目集合的对象.
 function WLYC_RJQTGGWDBU(DIWR_1, response, NIKC_1,RJQT_IOWR_VNWM,vkvy){

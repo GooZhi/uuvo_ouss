@@ -1,4 +1,4 @@
-var AFOA = require('./AFOA_BX/AFOA_UJ');
+var AFOA = require('./afoa/AFOA_UJ');
 var fs1 = require('fs');
 function UKYP(diwr_mcvn) {
     var ZKRS_KP=diwr_mcvn.ZKRS_KP

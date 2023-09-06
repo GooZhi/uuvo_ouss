@@ -1,4 +1,4 @@
-const uz_ms = require('../AFOA_BX/uz_ms');
+const uz_ms = require('../afoa/uz_ms');
 
 function WR_TSJQ_ZV_WRVR_FKKC_EY_ZT(DIWR_AFOA) {
     var UXUX_YHLD = typeof (DIWR_AFOA)

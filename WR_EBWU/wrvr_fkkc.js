@@ -1,5 +1,5 @@
-var vdzv = require('../AFOA_BX/vdzv.js')
-var uz_ms = require('../AFOA_BX/uz_ms')
+var vdzv = require('../afoa/vdzv.js')
+var uz_ms = require('../afoa/uz_ms')
 var yhrj = require("./WR_TSJQ_ZV_CE_EBWU_LD_YHRJ.js")
 const fs = require('fs')
 vdzv("Rt vdzv WRVR fkkc bx yxna", (yxna_fkkc_bx) => {

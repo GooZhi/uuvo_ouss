@@ -128,7 +128,7 @@ app.get('/about', function (req, res) {
     //var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
     res.render('about');
 });
-app.use(express.static(__dirname + '/afoa_bx'));
+app.use(express.static(__dirname + '/afoa'));
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser());
 app.get('/newsletter', function (req, res) {

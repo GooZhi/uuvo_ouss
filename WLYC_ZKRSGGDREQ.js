@@ -1,4 +1,4 @@
-var AFOA=require('.AFOA_BX/AFOA_UJ')
+var AFOA=require('.afoa/AFOA_UJ')
 var EOWL_HTML = require("./EOWL_HTML");
 var config=require('./config.json');
 var NIKC_1=config.NIKC_1;

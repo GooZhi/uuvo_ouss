@@ -1,8 +1,8 @@
 
-const md_RJOK_html_fs = require("../AFOA_BX/md_RJOK_html_fs");
+const md_RJOK_html_fs = require("../afoa/md_RJOK_html_fs");
 const fs = require('fs')
 const encoding = require('encoding');
-const uz_ms = require("../AFOA_BX/uz_ms");
+const uz_ms = require("../afoa/uz_ms");
 function WR_TSJQ_ZV_md_ld_html(IOWR_AFOA) {
     var UXUX_YHLD = typeof (IOWR_AFOA)
     if (UXUX_YHLD != "object") {

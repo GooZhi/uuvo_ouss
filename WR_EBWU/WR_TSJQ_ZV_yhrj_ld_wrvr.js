@@ -1,7 +1,7 @@
-const CEGGEBWU_VKVY_ZJQT = require("../AFOA_BX/CEGGEBWU_VKVY_ZJQT");
+const CEGGEBWU_VKVY_ZJQT = require("../afoa/CEGGEBWU_VKVY_ZJQT");
 const fs = require('fs');
-const uz_ms = require("../AFOA_BX/uz_ms");
-var yxna_1 = './AFOA_BX/KPLU/SI_ZTWM_3.java'
+const uz_ms = require("../afoa/uz_ms");
+var yxna_1 = './afoa/KPLU/SI_ZTWM_3.java'
 if (!fs.existsSync(yxna_1)) {
     throw new Error('csrf-yxna ac zznq-' + yxna_1)
 }

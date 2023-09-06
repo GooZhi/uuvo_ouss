@@ -1,4 +1,4 @@
-const VKIH_MACA = require("../AFOA_BX/VKIH_MACA");
+const VKIH_MACA = require("../afoa/VKIH_MACA");
 
 function WR_TSJQ_ZV_VKIH_MACA(IOWR_AFOA) {
     var UXUX_YHLD = typeof (IOWR_AFOA)

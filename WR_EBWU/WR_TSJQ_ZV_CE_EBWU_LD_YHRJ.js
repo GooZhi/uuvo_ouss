@@ -1,4 +1,4 @@
-const CE_EBWU_LD_YHRJ = require("../AFOA_BX/CE_EBWU_LD_YHRJ");
+const CE_EBWU_LD_YHRJ = require("../afoa/CE_EBWU_LD_YHRJ");
 function WR_TSJQ_ZV_CE_EBWU_LD_YHRJ(IOWR_AFOA) {
     var gkqj_mdcf_xbst=false
     var reg_mdcf=/md-(?:(?!md-|-md)[\s\S])*(?:-md|\bmd(?!\w|-))/ig;

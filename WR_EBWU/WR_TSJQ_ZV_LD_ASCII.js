@@ -1,5 +1,5 @@
 
-const ascii_ld_ztfr_zv_zqjp_ymrg = require("../AFOA_BX/ascii_ld_ztfr_zv_zqjp_ymrg");
+const ascii_ld_ztfr_zv_zqjp_ymrg = require("../afoa/ascii_ld_ztfr_zv_zqjp_ymrg");
 const fs=require('fs')
 const encoding=require('encoding')
 function WR_TSJQ_ZV_LD_ASCII(IOWR_AFOA) {

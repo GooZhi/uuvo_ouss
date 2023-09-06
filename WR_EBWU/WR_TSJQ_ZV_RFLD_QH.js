@@ -1,4 +1,4 @@
-const RFLD_QH = require("../AFOA_BX/RFLD_QH");
+const RFLD_QH = require("../afoa/RFLD_QH");
 
 function WR_TSJQ_ZV_RFLD_QH(IOWR_AFOA){
     var UXUX_YHLD = typeof (IOWR_AFOA)

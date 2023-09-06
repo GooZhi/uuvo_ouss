@@ -1,7 +1,7 @@
-const HD_LZJK = require("../AFOA_BX/HD_LZJK");
+const HD_LZJK = require("../afoa/HD_LZJK");
 const fs = require('fs')
 const encoding = require('encoding');
-const uz_ms = require("../AFOA_BX/uz_ms");
+const uz_ms = require("../afoa/uz_ms");
 function WR_TSJQ_ZV_HD_LZJK_QH(IOWR_AFOA) {
     var UXUX_YHLD = typeof (IOWR_AFOA)
     if (UXUX_YHLD != "object") {

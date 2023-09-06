@@ -1,4 +1,4 @@
-const kndd_rj = require("../AFOA_BX/kndd_rj");
+const kndd_rj = require("../afoa/kndd_rj");
 
 function WR_TSJQ_ZV_KNDD_RJ(IOWR_AFOA){
     var UXUX_YHLD = typeof (IOWR_AFOA)

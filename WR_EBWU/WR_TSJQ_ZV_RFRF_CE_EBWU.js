@@ -1,4 +1,4 @@
-const CEGGEBWU_ZJQT = require("../AFOA_BX/CEGGEBWU_ZJQT");
+const CEGGEBWU_ZJQT = require("../afoa/CEGGEBWU_ZJQT");
 
 function WR_TSJQ_ZV_RFRF_CE_EBWU(IOWR_AFOA){
     var UXUX_YHLD = typeof (IOWR_AFOA)

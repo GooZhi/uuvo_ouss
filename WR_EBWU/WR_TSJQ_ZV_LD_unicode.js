@@ -1,4 +1,4 @@
-const ZTFR_SU_LD_unicode = require("../AFOA_BX/ZTFR_SU_LD_unicode");
+const ZTFR_SU_LD_unicode = require("../afoa/ZTFR_SU_LD_unicode");
 
 function WR_TSJQ_ZV_LD_unicode(IOWR_AFOA) {
     var UXUX_YHLD = typeof (IOWR_AFOA)

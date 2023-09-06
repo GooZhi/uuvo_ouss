@@ -1,4 +1,4 @@
-const ce_ebwu_yhrj_sjbx_diyc_eysj_zjlz = require("../AFOA_BX/ce_ebwu_yhrj_sjbx_diyc_eysj_zjlz");
+const ce_ebwu_yhrj_sjbx_diyc_eysj_zjlz = require("../afoa/ce_ebwu_yhrj_sjbx_diyc_eysj_zjlz");
 const fs=require('fs')
 function WR_TSJQ_ZV_CE_EBWU_EYSJ_ZJLZ(IOWR_AFOA) {
     var UXUX_YHLD = typeof (IOWR_AFOA)
@@ -12,8 +12,8 @@ function WR_TSJQ_ZV_CE_EBWU_EYSJ_ZJLZ(IOWR_AFOA) {
     var DS
     var RJSE_jtyp = BQEO_1
     if (VNWM_MCVN_1 == null) {
-        var yxna_1 = "./AFOA_BX/KPLU/ce_ebwu_kplu_zv_yhrj_sjbx.java"
-        var yxna_2 = "./AFOA_BX/KPLU/SI_ZTWM_3.java"
+        var yxna_1 = "./afoa/KPLU/ce_ebwu_kplu_zv_yhrj_sjbx.java"
+        var yxna_2 = "./afoa/KPLU/SI_ZTWM_3.java"
         var VNWM_YHLD = ce_ebwu_yhrj_sjbx_diyc_eysj_zjlz(fs.readFileSync(yxna_1).toString(),fs.readFileSync(yxna_2).toString())
         RJSE_jtyp=VNWM_YHLD.map(rnsf => {
                 return rnsf.join(' , ')

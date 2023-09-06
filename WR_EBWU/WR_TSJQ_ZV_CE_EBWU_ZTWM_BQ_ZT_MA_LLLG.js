@@ -1,4 +1,4 @@
-const ce_ebwu_ztwm_bq_zt_ma_lllg = require("../AFOA_BX/ce_ebwu_ztwm_bq_zt_ma_lllg");
+const ce_ebwu_ztwm_bq_zt_ma_lllg = require("../afoa/ce_ebwu_ztwm_bq_zt_ma_lllg");
 function WR_TSJQ_ZV_CE_EBWU_ZTWM_BQ_ZT_MA_LLLG(IOWR_AFOA) {
     var UXUX_YHLD = typeof (IOWR_AFOA)
     if (UXUX_YHLD != "object") {

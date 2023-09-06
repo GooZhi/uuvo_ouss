@@ -40,7 +40,7 @@ function WR_TSJQ_ZV_VKIH_MACA(IOWR_AFOA) {
                 }
                 break;
             default:
-                throw new Error(("[ACUN MCVN WU]" + RNSF + "<--" + AFOA_UJ.WR_AFOA_MCVN))
+                throw new Error(("[ACUN MCVN WU]" + RNSF + "<--" + IOWR_AFOA.WR_AFOA_MCVN))
         }
     });
     var VNWM_1 = VKIH_MACA(BQEO_1, VNAW_1, DPHP_1,TYUB_1)

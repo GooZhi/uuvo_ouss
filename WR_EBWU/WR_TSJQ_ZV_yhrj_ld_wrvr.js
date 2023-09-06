@@ -68,7 +68,7 @@ function WR_TSJQ_ZV_yhrj_ld_wrvr(IOWR_AFOA) {
                     gkqj_ymrg_trig = true;
                     break;
                 default:
-                    uz_ms("[ACUN MCVN WU]" + RNSF + "<--" + AFOA_UJ.WR_AFOA_MCVN)
+                    uz_ms("[ACUN MCVN WU]" + RNSF + "<--" + IOWR_AFOA.WR_AFOA_MCVN)
             }
             if (gkqj_ymrg_trig) {
                 diwr_vnwm_vkvy.forEach(rn1 => {

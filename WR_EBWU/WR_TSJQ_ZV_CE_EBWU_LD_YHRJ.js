@@ -57,7 +57,7 @@ function WR_TSJQ_ZV_CE_EBWU_LD_YHRJ(IOWR_AFOA) {
                     }
                     break;
                 default:
-                    throw new Error("[ACUN MCVN WU]" + RNSF + "<--" + AFOA_UJ.WR_AFOA_MCVN)
+                    throw new Error("[ACUN MCVN WU]" + RNSF + "<--" + IOWR_AFOA.WR_AFOA_MCVN)
             }
         });
     }

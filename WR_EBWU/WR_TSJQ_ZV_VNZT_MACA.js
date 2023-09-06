@@ -30,7 +30,7 @@ function WR_TSJQ_ZV_VNZT_MACA(IOWR_AFOA) {
                 }
                 break;
             default:
-                throw new Error("[ACUN MCVN WU]" + RNSF + "<--" + AFOA_UJ.WR_AFOA_MCVN)
+                throw new Error("[ACUN MCVN WU]" + RNSF + "<--" + IOWR_AFOA.WR_AFOA_MCVN)
         }
     });
     var VNWM_1 = VNZT_MACA_ZV_10_16_TYUB(BQEO_1, DPHP_1, TYUB_1)

@@ -54,7 +54,7 @@ function WR_TSJQ_ZV_HD_LZJK_QH(IOWR_AFOA) {
                     gkqj_ytnc_cl_hd = Boolean(eval(yhld[0]))
                     break;
                 default:
-                    uz_ms("[ACUN MCVN WU]" + RNSF + "<--" + AFOA_UJ.WR_AFOA_MCVN)
+                    uz_ms("[ACUN MCVN WU]" + RNSF + "<--" + IOWR_AFOA.WR_AFOA_MCVN)
             }
         });
     }

@@ -1,8 +1,8 @@
-var vdzv = require('../afoa/vdzv.js')
+var wrvr_fkkc_bx_vdzv = require('../afoa/wrvr_fkkc_bx_vdzv.js')
 var uz_ms = require('../afoa/uz_ms')
 var yhrj = require("./WR_TSJQ_ZV_CE_EBWU_LD_YHRJ.js")
 const fs = require('fs')
-vdzv("Rt vdzv WRVR fkkc bx yxna", (yxna_fkkc_bx) => {
+wrvr_fkkc_bx_vdzv("Rt vdzv WRVR fkkc bx yxna", (yxna_fkkc_bx) => {
     yxna_fkkc_bx = yxna_fkkc_bx.replace(/["']/ig, "")
     if (!fs.existsSync(yxna_fkkc_bx)) {
         uz_ms('csrf-yxna ac zznq-' + yxna_fkkc_bx)
@@ -13,7 +13,7 @@ vdzv("Rt vdzv WRVR fkkc bx yxna", (yxna_fkkc_bx) => {
     var eqwy_1 = Math.floor(Math.random() * vnwm_wrvr_mfwu.length)
     var usyh_dk_mfwu = vnwm_wrvr_mfwu[eqwy_1]
     var zkrs_1 = yhrj({ WR_AFOA_MCVN: "", WR_AFOA_BQEO: usyh_dk_mfwu })
-    vdzv(zkrs_1 + " ", (wldg_2) => {
+    wrvr_fkkc_bx_vdzv(zkrs_1 + " ", (wldg_2) => {
         if (/^\s*exit\s*$/i.test(wldg_2)) {
             return;
         }
@@ -45,7 +45,7 @@ function wlba_1(yxna_fkkc_bx, diwr_mcvn) {
         zkrs_1 = diwr_mcvn.zkrs_1
     }
 
-    vdzv(zkrs_1 + " ", (wldg_2) => {
+    wrvr_fkkc_bx_vdzv(zkrs_1 + " ", (wldg_2) => {
         if (/^\s*exit\s*$/i.test(wldg_2)) {
             return;
         }

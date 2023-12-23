@@ -8,9 +8,9 @@ var WR_TSJQ_ZV_KNDD_RJ = require('./WR_TSJQ_ZV_KNDD_RJ')
 var WR_TSJQ_ZV_RFRF_CE_EBWU = require('./WR_TSJQ_ZV_RFRF_CE_EBWU')
 var WR_TSJQ_ZV_LD_unicode = require('./WR_TSJQ_ZV_LD_unicode')
 var WR_TSJQ_ZV_CE_EBWU_ZTWM_BQ_ZT_MA_LLLG = require('./WR_TSJQ_ZV_CE_EBWU_ZTWM_BQ_ZT_MA_LLLG')
-var WR_TSJQ_ZV_CE_EBWU_EYSJ_ZJLZ = require('./WR_TSJQ_ZV_CE_EBWU_EYSJ_ZJLZ')
 var WR_TSJQ_ZV_WR_RJOK = require('./WR_TSJQ_ZV_WR_RJOK')
 var WR_TSJQ_ZV_md_ld_html = require('./WR_TSJQ_ZV_md_ld_html')
+const WR_KFOU = require('./WR_KFOU.js')
 const WR_TSJQ_ZV_LD_ASCII = require('./WR_TSJQ_ZV_LD_ASCII')
 const WR_TSJQ_ZV_WRVR_FKKC_EY_ZT = require('./WR_TSJQ_ZV_WRVR_FKKC_EY_ZT')
 const WR_TSJQ_ZV_UWUU_OUSS_NIKC = require('./WR_TSJQ_ZV_UWUU_OUSS_NIKC')
@@ -27,6 +27,23 @@ function wr_afoa_bx() {
 `
         , wr_afoa_rh: WR_TSJQ_ZV_VKIH_MACA,
         vnwm_wr_afoa_lzm_wu: ["VKIH"]
+    },
+    {
+        wr_afoa_wu: "KFOU"
+        , eowl_uxux: "string"
+        , zkrs: "KFOU"
+        , csrf: `zhxm tsjq dk stgn zzzz.`
+        , klch: `
+        kfou={{
+            hd
+        }}
+
+        kfou={{
+            
+        }}
+        `
+        , wr_afoa_rh: WR_KFOU
+        , vnwm_wr_afoa_lzm_wu: ['KFOU']
     },
     {
         wr_afoa_wu: "VNZT_MACA"
@@ -218,17 +235,7 @@ gg-RFRF RFRF-gg
         , wr_afoa_rh: WR_TSJQ_ZV_WRVR_FKKC_EY_ZT,
         vnwm_wr_afoa_lzm_wu: ["FKKC", "FKKC_EY_ZT"]
     },
-    {
-        wr_afoa_wu: "CE_EBWU_EYSJ_ZJLZ"
-        , eowl_uxux: "object"
-        , zkrs: "CE EBWU EYSJ ZJLZ"
-        , csrf: `WRVR EYSJ ZJLZ: CQPI FR : JOWY YHRJ SJBX ZJZJ STYF DK EYSJ DIYC ACYF DK YHRJ SJEB DK ZBHM.`
-        , klch: `CE_EBWU_EYSJ_ZJLZ={{
-    }}
-    `
-        , wr_afoa_rh: WR_TSJQ_ZV_CE_EBWU_EYSJ_ZJLZ,
-        vnwm_wr_afoa_lzm_wu: ["ZJLZ"]
-    }]
+    ]
     this.zjzj_lzjk_wu = function () {
         var rj_wuzt_slgr = this.diwr_vnwm_tsjq.map(rn1 => {
             return rn1.wr_afoa_wu + "," + rn1.vnwm_wr_afoa_lzm_wu.join(',')

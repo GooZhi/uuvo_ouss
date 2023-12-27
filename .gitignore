@@ -1,2 +1,4 @@
 *.node.js
 *.bak
+test.*
+!test.cmd.js

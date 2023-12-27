@@ -1,0 +1,40 @@
+<title>afoa</title>
+<h2>afoa</h2>
+<form name="home" action="/" method="get">
+    <button>go home</button>
+</form>
+<textarea id="vdzv_1" rows="10" cols="100"></textarea>
+<br>
+<button onclick="vdum()">vdum</button>
+<button onclick="copy()">copy</button>
+<br>
+<textarea id="vdum_1" rows="30" cols="100"></textarea>
+<script>
+    function copy() {
+        let vdum_1 = document.getElementById('vdum_1')
+        navigator.clipboard.writeText(vdum_1.value).then(() => {
+            console.log('text copied to clipboard');
+        });
+    }
+    function vdum() {
+        let vdzv_1 = document.getElementById('vdzv_1')
+        let vdum_1 = document.getElementById('vdum_1')
+        fetch('/afoa', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Request-Headers': '*'
+            },
+            body: JSON.stringify({ vdzv: vdzv_1.value })
+        }).then(res => {
+            if (res.ok) {
+                return res.json()
+            } else {
+                console.log(res)
+                alert('error: please check the console to find out the reason.')
+            }
+        }).then(res => {
+            vdum_1.value = res.outputText
+        }).catch(err => { console.log(err); alert(err) })
+    }
+</script>

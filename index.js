@@ -1,4 +1,6 @@
 const child_process = require('child_process')
+const commd = require('./scripts/commd')
+const outputs = require('./scripts/outputs')
 var express = require('express');
 const bodyParser = require('body-parser');
 var UKYP_RTUL = require('./WLYC_UKYP')
@@ -192,6 +194,14 @@ app.post('/unicode_LDRG', function (req, res) {
 });
 app.post('/WR_EBWU', function (req, res) {
     WLYC_WR_EBWU(req, res, config)
+});
+app.get('/afoa', function (req, res) {
+    res.render('afoa')
+});
+app.post('/afoa', function (req, res) {
+    commd(req.body.vdzv, outputs(), {}).then(jtyj_1 => {
+        res.json(jtyj_1)
+    })
 });
 app.post('/VKVY_LD_TYUB_VN_ZNZK_NQUD', function (req, res) {
     WLYC_VKVY_LD_TYUB_VN_ZNZK_NQUD(req, res);

@@ -10,7 +10,7 @@
 <br>
 <textarea id="vdum_1" rows="30" cols="100"></textarea>
 <script>
-    function copy(){
+    function copy() {
         let vdum_1 = document.getElementById('vdum_1')
         copyToClipboard(vdum_1.value)
     }
@@ -34,13 +34,16 @@
             body: JSON.stringify({ vdzv: vdzv_1.value })
         }).then(res => {
             if (res.ok) {
-                return res.json()
+                res.json().then(jtyj_1 => {
+                    vdum_1.value = jtyj_1.outputText
+                })
             } else {
-                console.log(res)
+                res.json().then(jtyj_1 => {
+                    vdum_1.value = jtyj_1.reason
+                    console.log(jtyj_1.err_stack)
+                })
                 alert('error: please check the console to find out the reason.')
             }
-        }).then(res => {
-            vdum_1.value = res.outputText
         }).catch(err => { console.log(err); alert(err) })
     }
 </script>

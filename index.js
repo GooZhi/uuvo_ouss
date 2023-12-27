@@ -202,6 +202,9 @@ app.post('/afoa', function (req, res) {
     commd(req.body.vdzv, outputs(), {}).then(jtyj_1 => {
         res.json(jtyj_1)
     })
+    .catch(err=>{
+        res.status(500).json({ reason: err.message, err_stack: err.stack })
+    })
 });
 app.post('/VKVY_LD_TYUB_VN_ZNZK_NQUD', function (req, res) {
     WLYC_VKVY_LD_TYUB_VN_ZNZK_NQUD(req, res);

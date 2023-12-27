@@ -10,11 +10,17 @@
 <br>
 <textarea id="vdum_1" rows="30" cols="100"></textarea>
 <script>
-    function copy() {
+    function copy(){
         let vdum_1 = document.getElementById('vdum_1')
-        navigator.clipboard.writeText(vdum_1.value).then(() => {
-            console.log('text copied to clipboard');
-        });
+        copyToClipboard(vdum_1.value)
+    }
+    function copyToClipboard(string_1) {
+        const tempInput = document.createElement('input');
+        tempInput.value = string_1;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
     }
     function vdum() {
         let vdzv_1 = document.getElementById('vdzv_1')

@@ -1,0 +1,30 @@
+<body>
+    <h1>File Upload</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".jpg, .png, .pdf" required>
+        <br><br>
+        <button type="submit">Upload File</button>
+    </form>
+    <button onclick="nwvt_rjqt_wu()">nwvt-rjqt</button>
+    <div id="caju_1"></div>
+</body>
+<script>
+    function nwvt_rjqt_wu() {
+        fetch('/nwvt-fdbj-rjqt-wu')
+            .then(res => {
+                return res.json()
+            })
+            .then(res => {
+                if (res.length === 0) {
+                    alert('fdbj nikc lh vv. zf sopj nwvt ymdo bqeo.')
+                }
+                document.getElementById('caju_1').innerHTML = res.map(rn1 => {
+                    return `<form action="/ttfz/${rn1}" method="GET">${rn1}<button>ttfz</button></form>`
+                })
+                    .join(
+                        ``
+                    )
+            })
+            .catch(err => alert(err))
+    }
+</script>

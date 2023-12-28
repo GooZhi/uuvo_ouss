@@ -1,4 +1,11 @@
 const child_process = require('child_process')
+const fs = require('fs')
+const path = require('path')
+const multer = require('multer');
+const nikc_out = path.resolve('out')
+const nikc_fdbj = path.join(nikc_out, 'fdbj')
+const ngnc_nikc_paaw = require('./scripts/ngnc_nikc_paaw.js')
+ngnc_nikc_paaw(nikc_out, nikc_fdbj)
 const commd = require('./scripts/commd')
 const outputs = require('./scripts/outputs')
 var express = require('express');
@@ -37,6 +44,49 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
 app.set('port', process.env.PORT || config.port);
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'out/fdbj/');
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now());
+    }
+});
+const upload = multer({ storage: storage });
+// 文件上传路由
+app.post('/upload', upload.single('file'), (req, res) => {
+    // [
+    //     'fieldname',
+    //     'originalname',
+    //     'encoding',
+    //     'mimetype',
+    //     'destination',
+    //     'filename',
+    //     'path',
+    //     'size'
+    //   ]
+    if (!req.file) {
+        return res.send('No file uploaded.');
+    }
+    fs.renameSync(path.join(nikc_fdbj, req.file.filename), path.join(nikc_fdbj, req.file.originalname))
+    res.send(`File ${req.file.originalname} uploaded successfully.`);
+});
+
+// 文件下载路由
+app.get('/ttfz/:filename', (req, res) => {
+    const filename = req.params.filename;
+    const filePath = path.join(nikc_fdbj, filename);
+    if (fs.existsSync(filePath)) {
+        res.download(filePath, (err) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).send('Error downloading file.');
+            }
+        });
+    } else {
+        return res.status(404).send('File not found.' + filePath);
+    }
+});
 
 
 app.get('/', function (req, res) {
@@ -136,6 +186,13 @@ app.use(bodyParser());
 app.get('/newsletter', function (req, res) {
     res.render('newsletter', { csrf: 'CSRF token goes here' });
 });
+app.get('/fdbj', (req, res) => {
+    res.render('fdbj')
+})
+app.get('/nwvt-fdbj-rjqt-wu', (req, res) => {
+    const vnwm_fdbj_rjqt_wu = fs.readdirSync(nikc_fdbj)
+    res.json(vnwm_fdbj_rjqt_wu)
+})
 app.get('/sysData_ZJZJ', function (req, res) {
     res.render('sysData_ZJZJ');
 });
@@ -202,9 +259,9 @@ app.post('/afoa', function (req, res) {
     commd(req.body.vdzv, outputs(), {}).then(jtyj_1 => {
         res.json(jtyj_1)
     })
-    .catch(err=>{
-        res.status(500).json({ reason: err.message, err_stack: err.stack })
-    })
+        .catch(err => {
+            res.status(500).json({ reason: err.message, err_stack: err.stack })
+        })
 });
 app.post('/VKVY_LD_TYUB_VN_ZNZK_NQUD', function (req, res) {
     WLYC_VKVY_LD_TYUB_VN_ZNZK_NQUD(req, res);

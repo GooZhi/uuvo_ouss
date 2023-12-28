@@ -15,7 +15,7 @@
         copyToClipboard(vdum_1.value)
     }
     function copyToClipboard(string_1) {
-        const tempInput = document.createElement('input');
+        const tempInput = document.createElement('textarea');
         tempInput.value = string_1;
         document.body.appendChild(tempInput);
         tempInput.select();

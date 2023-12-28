@@ -2,3 +2,5 @@
 *.bak
 test.*
 !test.cmd.js
+/out
+/test
